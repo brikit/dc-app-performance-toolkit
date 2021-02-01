@@ -58,6 +58,7 @@ def view_page(webdriver, datasets):
     def measure():
         page.go_to()
         page.wait_for_page_loaded()
+        page.wait_for_page_metadata_loaded()
     measure()
 
 
