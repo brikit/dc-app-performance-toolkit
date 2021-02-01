@@ -62,9 +62,9 @@ def view_page_and_tree(locust):
     def view_page():
         r = locust.get(f'/pages/viewpage.action?pageId={page_id}', catch_response=True)
         content = r.content.decode('utf-8')
-#        if 'Created by' not in content or 'Save for later' not in content:
-#            logger.error(f'Fail to open page {page_id}: {content}')
-#        assert 'Created by' in content and 'Save for later' in content, 'Could not open page.'
+        if 'Created by' not in content or 'Save for later' not in content:
+            logger.error(f'Fail to open page {page_id}: {content}')
+        assert 'Created by' in content and 'Save for later' in content, 'Could not open page.'
         parent_page_id = fetch_by_re(params.parent_page_id_re, content)
         parsed_page_id = fetch_by_re(params.page_id_re, content)
         space_key = fetch_by_re(params.space_key_re, content)

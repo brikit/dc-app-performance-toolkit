@@ -61,6 +61,12 @@ class Page(BasePage):
 
     def wait_for_comment_field(self):
         self.wait_until_visible(PageLocators.comment_text_field)
+        
+    def wait_for_page_loaded(self):
+        self.wait_page_metadata_area(self)
+
+    def wait_page_metadata_area(self):
+        self.wait_until_visible(PageLocators.page_metadata_area)
 
 
 class Dashboard(BasePage):
