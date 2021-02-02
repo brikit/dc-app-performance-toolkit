@@ -69,6 +69,7 @@ def view_blog(webdriver, datasets):
     def measure():
         blog.go_to()
         blog.wait_for_page_loaded()
+        blog.wait_for_page_metadata_loaded()
     measure()
 
 
