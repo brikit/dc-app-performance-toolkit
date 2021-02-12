@@ -1,28 +1,47 @@
+import random
 import re
-from locustio.common_utils import init_logger, confluence_measure
+from locustio.common_utils import init_logger, confluence_measure, generate_random_string
 
 logger = init_logger(app_type='confluence')
 
 
 @confluence_measure("locust_app_specific_action")
 def app_specific_action(locust):
-    r = locust.get('/app/get_endpoint', catch_response=True)  # call app-specific GET endpoint
+    r = locust.get('/display/TEST/Test+Home', catch_response=True)  # call app-specific GET endpoint
     content = r.content.decode('utf-8')   # decode response content
 
     token_pattern_example = '"token":"(.+?)"'
-    id_pattern_example = '"id":"(.+?)"'
+    # id_pattern_example = '"id":"(.+?)"'
     token = re.findall(token_pattern_example, content)  # get TOKEN from response using regexp
-    id = re.findall(id_pattern_example, content)    # get ID from response using regexp
+    # id = re.findall(id_pattern_example, content)    # get ID from response using regexp
 
-    logger.locust_info(f'token: {token}, id: {id}')  # log info for debug when verbose is true in confluence.yml file
+    logger.locust_info(f'token: {token}')  # log info for debug when verbose is true in confluence.yml file
     if 'assertion string' not in content:
         logger.error(f"'assertion string' was not found in {content}")
     assert 'assertion string' in content  # assert specific string in response content
 
-    body = {"id": id, "token": token}  # include parsed variables to POST request body
+    employee_name = f"{generate_random_string(6, only_letters=True)} {generate_random_string(10, only_letters=True)}"
+    logger.locust_info(f'Employee {employee_name}')
+    body = {
+        "blueprint" : {
+            "name" : "Employee Page"
+        },
+        "destination" : {
+            "spaceKey" : "TEST",
+            "pageTitle" : f'Employee {employee_name}',
+            "parentPageTitle" : "Blueprint Maker Output"
+        },
+        "fields" : [
+            {
+                "name" : "employee-name",
+                "value" : employee_name
+            }
+        ]
+    }
+    # include parsed variables to POST request body
     headers = {'content-type': 'application/json'}
-    r = locust.post('/app/post_endpoint', body, headers, catch_response=True)  # call app-specific POST endpoint
+    r = locust.put('/rest/blueprintmaker/1.0/createpage', body, headers, catch_response=True)  # call app-specific POST endpoint
     content = r.content.decode('utf-8')
-    if 'assertion string after successful POST request' not in content:
-        logger.error(f"'assertion string after successful POST request' was not found in {content}")
-    assert 'assertion string after successful POST request' in content  # assertion after POST request
+    if 'pageId' not in content:
+        logger.error(f"'pageId' was not found in {content}")
+    assert 'pageId' in content  # assertion after POST request
