@@ -19,6 +19,7 @@ def app_specific_action(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={app_specific_page_id}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
-            page.wait_until_visible((By.ID, "blueprint-maker-create-link"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_visible((By.ID, "blueprint-maker-create-link"))  # Wait for the Blueprints button in the header
+            page.wait_until_visible((By.CSS_SELECTOR, ".conf-macro[data-macro-name='create-page-from-blueprint'], .conf-macro.brikit-live-blueprint-content"))  # Wait for the Create From Blueprint or Live Blueprint macros
         sub_measure()
     measure()

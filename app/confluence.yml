@@ -1,3 +1,8 @@
+# Theme Press: No REST API. Check for presence of header, footer, simple toolbar menu
+# Targeted Search: No REST API. Check for presence of targeted search field (added through custom layouts)?
+# Content Flow: No REST API. Check for metadata toolbar additions; check for page menu additions
+# Calendar Integrations: No REST API. Check for presence of macros on selected pages
+# Blueprint Maker: REST API, Blueprints button checks complete. Check for presence of macros on selected pages.
 ---
 settings:
   artifacts-dir: results/confluence/%Y-%m-%d_%H-%M-%S
