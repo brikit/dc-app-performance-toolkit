@@ -10,8 +10,7 @@ settings:
   verbose: false
   env:
     application_hostname: confl-loadb-9mryrygmvlnr-347270032.us-west-2.elb.amazonaws.com   # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
-    # application_hostname: data-loadb-ohy6ywfnxyzf-1064015962.us-west-2.elb.amazonaws.com   # Development instance
-    application_hostname: dc-te-loadb-1sbkqa49ppj3n-826605829.us-west-2.elb.amazonaws.com   # Development instance
+    # application_hostname: dc-te-loadb-1sbkqa49ppj3n-826605829.us-west-2.elb.amazonaws.com   # Development instance
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 1990, etc
     secure: False                    # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
