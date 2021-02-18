@@ -7,7 +7,8 @@ from selenium_ui.confluence.pages.selectors import UrlManager, LoginPageLocators
 
 class Login(BasePage):
     page_url = LoginPageLocators.login_page_url
-    page_loaded_selector = LoginPageLocators.login_button
+    # page_loaded_selector = LoginPageLocators.login_button
+    page_loaded_selector = (By.ID, "login-container")
 
     def set_credentials(self, username, password):
         self.get_element(LoginPageLocators.login_username_field).send_keys(username)
