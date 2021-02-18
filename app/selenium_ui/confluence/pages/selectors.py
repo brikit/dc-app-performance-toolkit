@@ -39,6 +39,7 @@ class LoginPageLocators:
 
     login_page_url = UrlManager().login_url()
     login_button = (By.ID, "loginButton")
+    login_container = (By.ID, "login-container")
     login_username_field = (By.ID, "os_username")
     login_password_field = (By.ID, "os_password")
 
