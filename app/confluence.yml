@@ -9,8 +9,8 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: confl-loadb-9mryrygmvlnr-347270032.us-west-2.elb.amazonaws.com   # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
-    # application_hostname: dc-te-loadb-1sbkqa49ppj3n-826605829.us-west-2.elb.amazonaws.com   # Development instance
+    application_hostname: confl-loadb-2op0nwxi13jz-1050680256.us-west-2.elb.amazonaws.com  # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
+    # application_hostname: data-loadb-ohy6ywfnxyzf-1064015962.us-west-2.elb.amazonaws.com   # Development instance
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 1990, etc
     secure: False                    # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
@@ -18,29 +18,25 @@ settings:
     admin_login: admin
     admin_password: admin
     load_executor: jmeter           # jmeter and locust are supported. jmeter by default.
-    concurrency: 200                # number of concurrent virtual users for jmeter or locust scenario
-    test_duration: 45m
-    ramp-up: 5m                     # time to spin all concurrent users
-    total_actions_per_hour: 20000
-    # concurrency: 2                # number of concurrent virtual users for jmeter or locust scenario
-    # test_duration: 5m
-    # ramp-up: 5s                     # time to spin all concurrent users
-    # total_actions_per_hour: 2000
+    concurrency: 2                # number of concurrent virtual users for jmeter or locust scenario
+    test_duration: 5m
+    ramp-up: 5s                     # time to spin all concurrent users
+    total_actions_per_hour: 2000
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.2.1
     LANGUAGE: en_US.utf8
     allow_analytics: No            # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
     # Action percentage for JMeter and Locust load executors
-    view_page: 54
-    view_dashboard: 6
-    view_blog: 8
-    search_cql: 7
+    view_page: 46
+    view_dashboard: 8
+    view_blog: 10
+    search_cql: 9
     create_blog: 3
-    create_and_edit_page: 6
-    comment_page: 5
-    view_attachment: 3
+    create_and_edit_page: 7
+    comment_page: 6
+    view_attachment: 4
     upload_attachment: 5
-    like_page: 3
+    like_page: 2
     standalone_extension: 0 # By default disabled
     # Custom dataset section.
     custom_dataset_query: title~"ThemePressTest*"          # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
@@ -48,6 +44,7 @@ services:
   - module: shellexec
     prepare:
       - python util/pre_run/environment_checker.py
+      - python util/pre_run/check_for_updates.py
       - python util/data_preparation/confluence_prepare_data.py
     shutdown:
       - python util/post_run/jmeter_post_check.py
@@ -119,7 +116,7 @@ modules:
       httpsampler.ignore_failed_embedded_resources: "true"
   selenium:
     chromedriver:
-      version: "88.0.4324.27" # Supports Chrome version 88. You can refer to http://chromedriver.chromium.org/downloads
+      version: "96.0.4664.45" # Supports Chrome version 96. You can refer to http://chromedriver.chromium.org/downloads
 reporting:
 - data-source: sample-labels
   module: junit-xml
