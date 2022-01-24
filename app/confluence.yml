@@ -4,7 +4,7 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: confl-loadb-1qzqcf8xnt304-1377432606.us-west-1.elb.amazonaws.com/  # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
+    application_hostname: confl-loadb-1qzqcf8xnt304-1377432606.us-west-1.elb.amazonaws.com  # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
     # application_hostname: data-loadb-ohy6ywfnxyzf-1064015962.us-west-2.elb.amazonaws.com   # Development instance
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 1990, etc
