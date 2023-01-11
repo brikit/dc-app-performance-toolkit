@@ -65,6 +65,7 @@ class PageLocators:
     page_title = (By.ID, "title-text")
     page_metadata_area = (By.CLASS_NAME, "page-metadata-modification-info")
     comment_text_field = (By.CSS_SELECTOR, ".quick-comment-prompt")
+    edit_page_button = (By.ID, "editPageLink")
 
 
 class DashboardLocators:
