@@ -1,3 +1,5 @@
+import time
+
 from selenium_ui.base_page import BasePage
 
 from selenium_ui.confluence.pages.selectors import UrlManager, LoginPageLocators, AllUpdatesLocators, PopupLocators,\
@@ -73,6 +75,11 @@ class Page(BasePage):
         url_manager = UrlManager(page_id=page_id)
         self.page_url = url_manager.page_url()
 
+    def wait_for_page_loaded(self):
+        self.wait_until_visible(self.page_loaded_selector)
+        self.wait_for_js_statement(key='document.readyState', value='complete',
+                                   exception_msg=f"Page {self.page_url} could not be loaded. Please check the UI.")
+
     def click_add_comment(self):
         css_selector = PageLocators.comment_text_field[1]
         self.execute_js(f"document.querySelector('{css_selector}').click()")
@@ -82,6 +89,20 @@ class Page(BasePage):
         
     def wait_for_page_metadata_loaded(self):
         self.wait_until_visible(PageLocators.page_metadata_area)
+
+    def click_edit(self):
+        self.wait_until_clickable(PageLocators.edit_page_button).click()
+
+    def wait_for_resources_loaded(self, timeout=5):
+        start_time = time.time()
+        print(f'Waiting for resources to be loaded: {timeout} s.')
+        while time.time() - start_time < timeout:
+            loaded = self.execute_js("return require('confluence-editor-loader/editor-loader').resourcesLoaded();")
+            if loaded:
+                print(f'Resources are loaded after {time.time() - start_time} s.')
+                break
+        else:
+            print(f'WARNING: confluence-editor-loader resources were not loaded in {timeout} s')
 
 
 class Dashboard(BasePage):
