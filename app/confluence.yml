@@ -10,7 +10,7 @@ settings:
   verbose: false
   check-updates: false    # disable bzt check for updates
   env:
-    application_hostname: acd002ca1880e497ba89b3f2bc5fc098-2036636870.us-east-2.elb.amazonaws.com  # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
+    application_hostname: a4b5ae3144c7f494fbd0ceb962f11984-1645727584.us-east-2.elb.amazonaws.com  # Enterprise cluster -- Confluence DC hostname without protocol and port e.g. test-confluence.atlassian.com or localhost
     # application_hostname: data-loadb-ohy6ywfnxyzf-1064015962.us-west-2.elb.amazonaws.com   # Development instance
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 1990, etc
