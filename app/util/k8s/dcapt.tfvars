@@ -15,7 +15,7 @@ environment_name = "dcapt-product"
 # Supported products: jira, confluence, bitbucket and bamboo.
 # e.g.: products = ["confluence"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # Default AWS region for DCAPT snapshots.
 region = "us-east-2"
@@ -166,7 +166,7 @@ jira_db_master_password = "Password1!"
 # If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here.
 # Please make sure valid Confluence license is used without spaces and new line symbols.
 # ! REQUIRED !
-confluence_license = "confluence-license"
+confluence_license = "AAABjw0ODAoPeNp1kV9v2jAUxd/9KSL1pRNKZSeQJkiWBk66pksIbVj/iReTXoZLMMxOaNmnn8FFbTft0fcc3/u7557cwZNzxaWDfYd4fez3e57DyonjYa+LmALeiLWMeQN0X3ExcXEXxaArJTZ7ibK1nNctyAqcU+PjDgPZgPoy7TvJltftoQHKuTBVyY0ted0ItfvQ0nOxjzJRgdT/EWsr3oLS+5EeKtvZO0GjWkCVwTgbtasZqGL+QxsndQl6J7CuQv3kUmhbGSqxFI39yatGbMGazEaNeSeGuaYLvnsC+XV28J5V69UR5pLrBc3ZC7uI198jPg5jIgavm4keBmGWzp7vw2XZHSxugrxX/wbv5XE5fuyEt51Idn6dsw7R19dTOqV2/Nv2k90GRnwFlBV5ntywdJBZvWy4MqHSOa81HLNKY5qlcZmM3IxEkd8LQoJKUFtQRhnem+iih4K46SgM3KzofbOt9jeyJ7LbLmF3zJUEGJ/j0PcJGreqWnANf1/+LZsD5L/RGBb6mecPQNHGrTAsAhQWmL4U39/ZXMz+Xv8JYgf4Og7B9gIUUEXDtvSBlcLdYthc231CN4gLw00=X02jb"
 
 # Number of Confluence application nodes
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after Confluence is fully
