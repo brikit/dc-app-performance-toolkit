@@ -40,6 +40,5 @@ def app_specific_action(webdriver, datasets):
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={app_specific_page_id}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
             page.wait_until_visible((By.CSS_SELECTOR, ".targeted-search-field-query, .targeted-search-link-macro, .search-results-list, .query-search-field, .label-select-field-group"))
-            #page.wait_until_visible((By.CSS_SELECTOR, ".targeted-search-field, .targeted-search-link-macro, .content-query-macro, .interactive-search, .label-select-field"))  # Wait for the Targeted Search Field, Link, Content Query, or Interactive Search macros
         sub_measure()
     measure()
