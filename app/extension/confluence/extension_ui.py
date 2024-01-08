@@ -43,7 +43,8 @@ def app_specific_action(webdriver, datasets):
             page.wait_until_visible((By.CSS_SELECTOR, ".conf-macro[data-macro-name='create-page-from-blueprint'], .conf-macro.brikit-live-blueprint-content"))  # Wait for the Create From Blueprint or Live Blueprint macros
             page.wait_until_visible((By.CSS_SELECTOR, ".conf-macro[data-macro-name='create-page-from-blueprint']")).click()
             inputElement = page.wait_until_visible((By.CLASS_NAME, "blueprint-maker-form-field"))
-            inputElement.sendKey("Test Name")
+            pageName = "Test Name " + str(random.randint(0,999))
+            inputElement.sendKey(pageName)
             page.wait_until_visible((By.ID, "dialog-next-button")).click()
             page.wait_until_visible((By.ID, "dialog-submit-button")).click()
         sub_measure()
