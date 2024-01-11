@@ -40,8 +40,6 @@ def app_specific_action(webdriver, datasets):
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={app_specific_page_id}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
             page.wait_until_visible((By.CLASS_NAME, "brikit-header-backdrop"))
-            page.wait_until_visible((By.ID, "brikit-simple-toolbar-toggle")).click()
-            page.wait_until_visible((By.ID, "brikit-simple-toolbar"))
             page.wait_until_visible((By.CLASS_NAME, "brikit-content-stack"))
             page.wait_until_visible((By.CLASS_NAME, "brikit-title-container"))
             page.wait_until_visible((By.CLASS_NAME, "brikit-layer"))
