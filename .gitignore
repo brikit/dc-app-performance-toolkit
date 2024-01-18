@@ -10,4 +10,3 @@ outputs/
 *.pyc
 local_*.yml
 **jmeter.properties
-app/util/k8s/aws_envs
