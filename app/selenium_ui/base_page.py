@@ -119,15 +119,15 @@ class BasePage:
 
         elif ec_type == ec.invisibility_of_element_located:
             message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
-                        f"Locator: {locator}{str(expected_condition)}")
+                        f"Locator: {locator}")
 
         elif ec_type == ec.frame_to_be_available_and_switch_to_it:
             message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
-                        f"Locator: {locator}{str(expected_condition)}")
+                        f"Locator: {locator}")
 
         else:
             message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
-                        f"Locator: {locator}{str(expected_condition)}")
+                        f"Locator: {locator}")
 
         return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
 

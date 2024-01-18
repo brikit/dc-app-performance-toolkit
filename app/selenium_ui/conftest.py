@@ -145,11 +145,7 @@ def print_timing(interaction=None, explicit_timing=None):
                 success = False
                 # https://docs.python.org/2/library/sys.html#sys.exc_info
                 exc_type, full_exception = sys.exc_info()[:2]
-                locator_debug_message = ""
-                if 'msg' in dir(full_exception):
-                    if 'Locator' in full_exception.msg:
-                        locator_debug_message = f" - {full_exception.msg.split('Locator:')[-1].strip().replace(',','')}"
-                error_msg = f"Failed measure: {interaction} - {exc_type.__name__}{locator_debug_message}"
+                error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
             end = time()
             timing = str(int((end - start) * 1000))
 
