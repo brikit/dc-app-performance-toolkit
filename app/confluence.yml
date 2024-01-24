@@ -1,8 +1,3 @@
-#   Theme Press: No REST API. Check for presence of header, footer, simple toolbar menu
-# √ Targeted Search: No REST API. Check for presence of targeted search field (added through custom layouts)?
-#   Content Flow: No REST API. Check for metadata toolbar additions; check for page menu additions
-# √ Calendar Integrations: No REST API. Check for presence of macros on selected pages
-# √ Blueprint Maker: REST API, Blueprints button checks complete. Check for presence of macros on selected pages.
 ---
 settings:
   artifacts-dir: results/confluence/%Y-%m-%d_%H-%M-%S
@@ -10,7 +5,7 @@ settings:
   verbose: false
   check-updates: false                 # disable bzt check for updates
   env:
-    application_hostname: a3fd15a63d8214fdcac125e896affb30-1749890520.us-east-2.elb.amazonaws.com   # Confluence DC hostname without protocol, port and postfix e.g. test-confluence.atlassian.com or localhost
+    application_hostname: a4ee847459c1649b99168f01c0b9bb1e-1844238402.us-east-2.elb.amazonaws.com   # Confluence DC hostname without protocol, port and postfix e.g. test-confluence.atlassian.com or localhost
     application_protocol: http         # http or https
     application_port: 80               # 80, 443, 8080, 1990, etc
     secure: True                       # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
@@ -22,7 +17,6 @@ settings:
     test_duration: 45m
     ramp-up: 5m                        # time to spin all concurrent users
     total_actions_per_hour: 20000
-
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.5
     LANGUAGE: en_US.utf8
@@ -43,7 +37,7 @@ settings:
     upload_emoticon: 2      # For Confluence 8.4.x+
     standalone_extension: 0 # By default disabled
     # Custom dataset section.
-    custom_dataset_query: title ~ 'CalendarIntegrationsTest*'          # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
+    custom_dataset_query:     title ~ 'CalendarIntegrationsTest*'      # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
 services:
   - module: shellexec
     prepare:
