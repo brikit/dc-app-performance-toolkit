@@ -10,7 +10,7 @@
 # Unique name of your enterprise-scale test cluster.
 # This value can not be altered after the configuration has been applied.
 # ! REQUIRED !
-environment_name = "dcapt-testing"
+environment_name = "brikit-testing"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
@@ -24,7 +24,7 @@ products = ["confluence"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "AAABjw0ODAoPeNp1kV9v2jAUxd/9KSL1pRNKZSeQJkiWBk66pksIbVj/iReTXoZLMMxOaNmnn8FFbTft0fcc3/u7557cwZNzxaWDfYd4fez3e57DyonjYa+LmALeiLWMeQN0X3ExcXEXxaArJTZ7ibK1nNctyAqcU+PjDgPZgPoy7TvJltftoQHKuTBVyY0ted0ItfvQ0nOxjzJRgdT/EWsr3oLS+5EeKtvZO0GjWkCVwTgbtasZqGL+QxsndQl6J7CuQv3kUmhbGSqxFI39yatGbMGazEaNeSeGuaYLvnsC+XV28J5V69UR5pLrBc3ZC7uI198jPg5jIgavm4keBmGWzp7vw2XZHSxugrxX/wbv5XE5fuyEt51Idn6dsw7R19dTOqV2/Nv2k90GRnwFlBV5ntywdJBZvWy4MqHSOa81HLNKY5qlcZmM3IxEkd8LQoJKUFtQRhnem+iih4K46SgM3KzofbOt9jeyJ7LbLmF3zJUEGJ/j0PcJGreqWnANf1/+LZsD5L/RGBb6mecPQNHGrTAsAhQWmL4U39/ZXMz+Xv8JYgf4Og7B9gIUUEXDtvSBlcLdYthc231CN4gLw00=X02jb"
+confluence_license = "AAABjQ0ODAoPeNp1kV9v2jAUxd/9KSLtZXtI5ySQApKlNU62BSVkaWAbUl9MdimBYDL/oeTbz+Cirp0m+cX3HF//7rnv5hqcnAkHDx0vnPjjyeDWodXc8bE/QFQAU82Bx0wBOVdcHLg4RDHIWjTdWSL0wNetBl6D8974mEOBKxAfHiZOcmStvjRAOWtMlTNjS05dI/q/WpozRFlTA5f/EVsrfgchz1/6qNKrFwIlNKDaYNzM9H4FolgvpHES10MvBNZViEfGG2krkWh2jbIvWa2aI1iTmUiZe2KYW7Jh/S/gn1YX70192F9hvjK5ITnF9HNJ48j7eJLb4Y9dx/dlqJdTrbclXz7lj+li2Y3Y04ll5eD3FN9Hd1E/3tZqeijjxQOxvz8PP+87mLE9EFrkeXJP07vM6pViwmRK1qyVcI0qjUmWxlUyczMfe4MgwAGqQBxBGCX6iX13vCw8N52NQjcrhl9sq/OK7IbssDvor7F6Ica3eBQEHvqmRb1hEt4u/jmaC+S/yRgW8prnD5CpyCcwLAIUawvA5GqxLjYY8WVXs4O4ERvURvUCFGCCNYb0XLZz2y7VknaFJIPuAPsZX02j7"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
@@ -34,7 +34,7 @@ bamboo_license = "bamboo-license"
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after product is fully
 # installed and configured.
 jira_replica_count = 1
-confluence_replica_count = 4
+confluence_replica_count = 1
 bitbucket_replica_count = 1
 crowd_replica_count = 1
 
