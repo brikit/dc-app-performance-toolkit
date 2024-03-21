@@ -24,7 +24,7 @@ products = ["confluence"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "confluence-license"
+confluence_license = "AAABjQ0ODAoPeNp1kV9v2jAUxd/9KSLtZXtI5ySQApKlNU62BSVkaWAbUl9MdimBYDL/oeTbz+Cirp0m+cX3HF//7rnv5hqcnAkHDx0vnPjjyeDWodXc8bE/QFQAU82Bx0wBOVdcHLg4RDHIWjTdWSL0wNetBl6D8974mEOBKxAfHiZOcmStvjRAOWtMlTNjS05dI/q/WpozRFlTA5f/EVsrfgchz1/6qNKrFwIlNKDaYNzM9H4FolgvpHES10MvBNZViEfGG2krkWh2jbIvWa2aI1iTmUiZe2KYW7Jh/S/gn1YX70192F9hvjK5ITnF9HNJ48j7eJLb4Y9dx/dlqJdTrbclXz7lj+li2Y3Y04ll5eD3FN9Hd1E/3tZqeijjxQOxvz8PP+87mLE9EFrkeXJP07vM6pViwmRK1qyVcI0qjUmWxlUyczMfe4MgwAGqQBxBGCX6iX13vCw8N52NQjcrhl9sq/OK7IbssDvor7F6Ica3eBQEHvqmRb1hEt4u/jmaC+S/yRgW8prnD5CpyCcwLAIUawvA5GqxLjYY8WVXs4O4ERvURvUCFGCCNYb0XLZz2y7VknaFJIPuAPsZX02j7"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
