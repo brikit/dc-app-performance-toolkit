@@ -4,7 +4,7 @@ platform: platform
 product: marketplace
 category: devguide
 subcategory: build
-date: "2024-03-19"
+date: "2024-06-24"
 ---
 # Data Center App Performance Toolkit User Guide For Bitbucket
 
@@ -60,6 +60,11 @@ Below process describes how to install low-tier Bitbucket DC with "small" datase
    Do not use `root` user credentials for cluster creation. Instead, [create an admin user](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
    {{% /warning %}}
 2. Clone [Data Center App Performance Toolkit](https://github.com/atlassian/dc-app-performance-toolkit) locally.
+   {{% warning %}}
+   For annual review, always get the latest version of the DCAPT code from the master branch.
+
+   DCAPT supported versions: three latest minor version [releases](https://github.com/atlassian/dc-app-performance-toolkit/releases).
+   {{% /warning %}}
 3. Navigate to `dc-app-performance-toolkit/app/util/k8s` folder.
 4. Set AWS access keys created in step1 in `aws_envs` file:
    - `AWS_ACCESS_KEY_ID`
@@ -84,7 +89,7 @@ Below process describes how to install low-tier Bitbucket DC with "small" datase
    -v "/$PWD/dcapt-small.tfvars:/data-center-terraform/conf.tfvars" \
    -v "/$PWD/dcapt-snapshots.json:/data-center-terraform/dcapt-snapshots.json" \
    -v "/$PWD/logs:/data-center-terraform/logs" \
-   -it atlassianlabs/terraform:2.7.4 ./install.sh -c conf.tfvars
+   -it atlassianlabs/terraform:2.9.1 ./install.sh -c conf.tfvars
    ```
 8. Copy product URL from the console output. Product url should look like `http://a1234-54321.us-east-2.elb.amazonaws.com/bitbucket`.
 
@@ -101,6 +106,11 @@ Make sure **English** language is selected as a default language on the **![cog 
 {{% /warning %}}
 
 1. Clone [Data Center App Performance Toolkit](https://github.com/atlassian/dc-app-performance-toolkit) locally.
+   {{% warning %}}
+   For annual review, always get the latest version of the DCAPT code from the master branch.
+
+   DCAPT supported versions: three latest minor version [releases](https://github.com/atlassian/dc-app-performance-toolkit/releases).
+   {{% /warning %}}
 1. Follow the [README.md](https://github.com/atlassian/dc-app-performance-toolkit/blob/master/README.md) instructions to set up toolkit locally.
 1. Navigate to `dc-app-performance-toolkit/app` folder.
 1. Open the `bitbucket.yml` file and fill in the following variables:
@@ -124,8 +134,8 @@ Make sure **English** language is selected as a default language on the **![cog 
     bzt bitbucket.yml
     ```
 
-1. Review the resulting table in the console log. All JMeter and Selenium actions should have 95+% success rate.  
-In case some actions does not have 95+% success rate refer to the following logs in `dc-app-performance-toolkit/app/results/bitbucket/YY-MM-DD-hh-mm-ss` folder:
+1. Review the resulting table in the console log. All JMeter and Selenium actions should have 0+% success rate.  
+In case some actions have 0% success rate refer to the following logs in `dc-app-performance-toolkit/app/results/bitbucket/YY-MM-DD-hh-mm-ss` folder:
 
     - `results_summary.log`: detailed run summary
     - `results.csv`: aggregated .csv file with all actions and timings
@@ -134,7 +144,11 @@ In case some actions does not have 95+% success rate refer to the following logs
     - `pytest.*`: logs of Pytest-Selenium execution
 
 {{% warning %}}
-Do not proceed with the next step until you have all actions 95+% success rate. Ask [support](#support) if above logs analysis did not help.
+On the local run with development environment default tests may be flaky due to limited resources of the development cluster and local network.
+
+The only purpose of the development cluster is to [develop app-specific actions](#devappaction).
+
+Do not proceed with the next step if any action has 0% success rate. Ask [support](#support) if above logs analysis did not help.
 {{% /warning %}}
 
 ---
@@ -185,10 +199,10 @@ In case of any problems with uninstall use [Force terminate command](https://git
 {{% warning %}}
 The installation of 4-pods DC environment and execution pod requires at least **40** vCPU Cores.
 Newly created AWS account often has vCPU limit set to low numbers like 5 vCPU per region.
-Check your account current vCPU limit for On-Demand Standard instances by visiting [AWS Service Quotas](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) page.
+Check your account current vCPU limit for On-Demand Standard instances by visiting [AWS Service Quotas](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) page.
 **Applied quota value** is the current CPU limit in the specific region.
 
-Make that current limit is large enough to deploy new cluster.
+Make that current region limit is large enough to deploy new cluster.
 The limit can be increased by using **Request increase at account-level** button: choose a region, set a quota value which equals a required number of CPU Cores for the installation and press **Request** button.
 Recommended limit is 50.
 {{% /warning %}}
@@ -224,6 +238,11 @@ Below process describes how to install enterprise-scale Bitbucket DC with "large
    Do not use `root` user credentials for cluster creation. Instead, [create an admin user](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
    {{% /warning %}}
 2. Clone [Data Center App Performance Toolkit](https://github.com/atlassian/dc-app-performance-toolkit) locally.
+   {{% warning %}}
+   For annual review, always get the latest version of the DCAPT code from the master branch.
+
+   DCAPT supported versions: three latest minor version [releases](https://github.com/atlassian/dc-app-performance-toolkit/releases).
+   {{% /warning %}}
 3. Navigate to `dc-app-performance-toolkit/app/util/k8s` folder.
 4. Set AWS access keys created in step1 in `aws_envs` file:
    - `AWS_ACCESS_KEY_ID`
@@ -248,7 +267,7 @@ Below process describes how to install enterprise-scale Bitbucket DC with "large
    -v "/$PWD/dcapt.tfvars:/data-center-terraform/conf.tfvars" \
    -v "/$PWD/dcapt-snapshots.json:/data-center-terraform/dcapt-snapshots.json" \
    -v "/$PWD/logs:/data-center-terraform/logs" \
-   -it atlassianlabs/terraform:2.7.4 ./install.sh -c conf.tfvars
+   -it atlassianlabs/terraform:2.9.1 ./install.sh -c conf.tfvars
    ```
 8. Copy product URL from the console output. Product url should look like `http://a1234-54321.us-east-2.elb.amazonaws.com/bitbucket`.
 
@@ -323,7 +342,7 @@ To receive performance baseline results **without** an app installed:
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh bitbucket.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh bitbucket.yml
     ```
 
 1. View the following main results of the run in the `dc-app-performance-toolkit/app/results/bitbucket/YY-MM-DD-hh-mm-ss` folder:
@@ -354,7 +373,7 @@ To receive performance results with an app installed (still use master branch):
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh bitbucket.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh bitbucket.yml
     ```
 
 {{% note %}}
@@ -404,7 +423,7 @@ To receive scalability benchmark results for one-node Bitbucket DC **with** app-
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh bitbucket.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh bitbucket.yml
     ```
    
 {{% note %}}
@@ -415,7 +434,7 @@ Review `results_summary.log` file under artifacts dir location. Make sure that o
 ##### <a id="run4"></a> Run 4 (~1 hour)
 {{% note %}}
 Before scaling your DC make sure that AWS vCPU limit is not lower than needed number. Minimum recommended value is 50.
-Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) to see current limit.
+Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) to see current limit for `us-east-2` region.
 [EC2 CPU Limit](https://developer.atlassian.com/platform/marketplace/dc-apps-performance-toolkit-user-guide-jira/#ec2-cpu-limit) section has instructions on how to increase limit if needed.
 {{% /note %}}
 
@@ -429,7 +448,7 @@ To receive scalability benchmark results for two-node Bitbucket DC **with** app-
    -v "/$PWD/dcapt.tfvars:/data-center-terraform/conf.tfvars" \
    -v "/$PWD/dcapt-snapshots.json:/data-center-terraform/dcapt-snapshots.json" \
    -v "/$PWD/logs:/data-center-terraform/logs" \
-   -it atlassianlabs/terraform:2.7.4 ./install.sh -c conf.tfvars
+   -it atlassianlabs/terraform:2.9.1 ./install.sh -c conf.tfvars
    ```
 1. Navigate to `dc-app-performance-toolkit` folder and start tests execution:
     ``` bash
@@ -442,7 +461,7 @@ To receive scalability benchmark results for two-node Bitbucket DC **with** app-
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh bitbucket.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh bitbucket.yml
     ```
 
 {{% note %}}
@@ -453,7 +472,7 @@ Review `results_summary.log` file under artifacts dir location. Make sure that o
 ##### <a id="run5"></a> Run 5 (~1 hour)
 {{% note %}}
 Before scaling your DC make sure that AWS vCPU limit is not lower than needed number. Minimum recommended value is 50.
-Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) to see current limit.
+Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) to see current limit for `us-east-2` region.
 [EC2 CPU Limit](https://developer.atlassian.com/platform/marketplace/dc-apps-performance-toolkit-user-guide-jira/#ec2-cpu-limit) section has instructions on how to increase limit if needed.
 {{% /note %}}
 
@@ -471,7 +490,7 @@ To receive scalability benchmark results for four-node Bitbucket DC with app-spe
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh bitbucket.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh bitbucket.yml
     ```
 
 {{% note %}}

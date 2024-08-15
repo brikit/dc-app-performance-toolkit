@@ -4,7 +4,7 @@ platform: platform
 product: marketplace
 category: devguide
 subcategory: build
-date: "2024-03-19"
+date: "2024-06-24"
 ---
 # Data Center App Performance Toolkit User Guide For Crowd
 
@@ -12,7 +12,7 @@ This document walks you through the process of testing your app on Crowd using t
 
 In this document, we cover the use of the Data Center App Performance Toolkit on Enterprise-scale environment.
 
-**Enterprise-scale environment**: Crowd Data Center environment used to generate Data Center App Performance Toolkit test results for the Marketplace approval process. Preferably, use the [AWS Quick Start for Crowd Data Center](https://aws.amazon.com/quickstart/architecture/atlassian-crowd) with the parameters prescribed below. These parameters provision larger, more powerful infrastructure for your Crowd Data Center.
+**Enterprise-scale environment**: Crowd Data Center environment used to generate Data Center App Performance Toolkit test results for the Marketplace approval process. Preferably, use the parameters prescribed below.
 
 1. [Set up an enterprise-scale environment Crowd Data Center on AWS](#instancesetup).
 2. [App-specific actions development](#appspecificaction).
@@ -27,10 +27,10 @@ In this document, we cover the use of the Data Center App Performance Toolkit on
 {{% warning %}}
 The installation of 4-pods DC environment and execution pod requires at least **24** vCPU Cores.
 Newly created AWS account often has vCPU limit set to low numbers like 5 vCPU per region.
-Check your account current vCPU limit for On-Demand Standard instances by visiting [AWS Service Quotas](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) page.
+Check your account current vCPU limit for On-Demand Standard instances by visiting [AWS Service Quotas](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) page.
 **Applied quota value** is the current CPU limit in the specific region.
 
-Make that current limit is large enough to deploy new cluster.
+Make that current region limit is large enough to deploy new cluster.
 The limit can be increased by using **Request increase at account-level** button: choose a region, set a quota value which equals a required number of CPU Cores for the installation and press **Request** button.
 Recommended limit is 30.
 {{% /warning %}}
@@ -44,6 +44,11 @@ specifically for performance testing during the DC app review process.
    Do not use `root` user credentials for cluster creation. Instead, [create an admin user](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
    {{% /warning %}}
 2. Clone [Data Center App Performance Toolkit](https://github.com/atlassian/dc-app-performance-toolkit) locally.
+   {{% warning %}}
+   For annual review, always get the latest version of the DCAPT code from the master branch.
+
+   DCAPT supported versions: three latest minor version [releases](https://github.com/atlassian/dc-app-performance-toolkit/releases).
+   {{% /warning %}}
 3. Navigate to `dc-app-performance-toolkit/app/util/k8s` folder.
 4. Set AWS access keys created in step1 in `aws_envs` file:
    - `AWS_ACCESS_KEY_ID`
@@ -66,7 +71,7 @@ specifically for performance testing during the DC app review process.
    -v "/$PWD/dcapt.tfvars:/data-center-terraform/conf.tfvars" \
    -v "/$PWD/dcapt-snapshots.json:/data-center-terraform/dcapt-snapshots.json" \
    -v "/$PWD/logs:/data-center-terraform/logs" \
-   -it atlassianlabs/terraform:2.7.4 ./install.sh -c conf.tfvars
+   -it atlassianlabs/terraform:2.9.1 ./install.sh -c conf.tfvars
    ```
 7. Copy product URL from the console output. Product url should look like `http://a1234-54321.us-east-2.elb.amazonaws.com/crowd`.
 
@@ -177,7 +182,7 @@ To receive performance baseline results **without** an app installed and **witho
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh crowd.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh crowd.yml
     ```
 1. View the following main results of the run in the `dc-app-performance-toolkit/app/results/crowd/YY-MM-DD-hh-mm-ss` folder:
     - `results_summary.log`: detailed run summary
@@ -206,7 +211,7 @@ To receive performance results with an app installed (still use master branch):
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh crowd.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh crowd.yml
     ```
 
 {{% note %}}
@@ -265,7 +270,7 @@ To receive scalability benchmark results for one-node Crowd DC **with** app-spec
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh crowd.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh crowd.yml
     ```
 
 {{% note %}}
@@ -275,7 +280,7 @@ Review `results_summary.log` file under artifacts dir location. Make sure that o
 ##### <a id="run4"></a> Run 4 (~50 min)
 {{% note %}}
 Before scaling your DC make sure that AWS vCPU limit is not lower than needed number. Minimum recommended value is 30.
-Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) to see current limit.
+Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) to see current limit for `us-east-2` region.
 [EC2 CPU Limit](https://developer.atlassian.com/platform/marketplace/dc-apps-performance-toolkit-user-guide-jira/#ec2-cpu-limit) section has instructions on how to increase limit if needed.
 {{% /note %}}
 
@@ -289,7 +294,7 @@ To receive scalability benchmark results for two-node Crowd DC **with** app-spec
    -v "/$PWD/dcapt.tfvars:/data-center-terraform/conf.tfvars" \
    -v "/$PWD/dcapt-snapshots.json:/data-center-terraform/dcapt-snapshots.json" \
    -v "/$PWD/logs:/data-center-terraform/logs" \
-   -it atlassianlabs/terraform:2.7.4 ./install.sh -c conf.tfvars
+   -it atlassianlabs/terraform:2.9.1 ./install.sh -c conf.tfvars
    ```
 1. Edit **run parameters** for 2 nodes run. To do it, left uncommented only 2 nodes scenario parameters in `crowd.yml` file.
    ```
@@ -316,7 +321,7 @@ To receive scalability benchmark results for two-node Crowd DC **with** app-spec
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh crowd.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh crowd.yml
     ```
 
 {{% note %}}
@@ -327,7 +332,7 @@ Review `results_summary.log` file under artifacts dir location. Make sure that o
 ##### <a id="run5"></a> Run 5 (~50 min)
 {{% note %}}
 Before scaling your DC make sure that AWS vCPU limit is not lower than needed number. Minimum recommended value is 30.
-Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A) to see current limit.
+Use [AWS Service Quotas service](https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-1216C47A?region=us-east-2) to see current limit for `us-east-2` region.
 [EC2 CPU Limit](https://developer.atlassian.com/platform/marketplace/dc-apps-performance-toolkit-user-guide-jira/#ec2-cpu-limit) section has instructions on how to increase limit if needed.
 {{% /note %}}
 
@@ -359,7 +364,7 @@ To receive scalability benchmark results for four-node Crowd DC with app-specifi
     -e ENVIRONMENT_NAME=$ENVIRONMENT_NAME \
     -v "/$PWD:/data-center-terraform/dc-app-performance-toolkit" \
     -v "/$PWD/app/util/k8s/bzt_on_pod.sh:/data-center-terraform/bzt_on_pod.sh" \
-    -it atlassianlabs/terraform:2.7.4 bash bzt_on_pod.sh crowd.yml
+    -it atlassianlabs/terraform:2.9.1 bash bzt_on_pod.sh crowd.yml
     ```
 
 {{% note %}}
