@@ -39,6 +39,10 @@ def app_specific_action(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={app_specific_page_id}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
-            page.wait_until_visible((By.CSS_SELECTOR, ".targeted-search-field-query, .targeted-search-link-macro, .search-results-list, .query-search-field, .label-select-field-group"))
+            page.wait_until_visible((By.ID, "brikit-quick-search-query"))
+            page.wait_until_visible((By.CLASS_NAME, "targeted-search-link-macro"))
+            page.wait_until_visible((By.CLASS_NAME, "interactive-search-results"))
+            page.wait_until_visible((By.CLASS_NAME, "label-select-field-group"))
+            #page.wait_until_visible((By.CSS_SELECTOR, "brikit-quick-search-query, .targeted-search-field-query, .targeted-search-link-macro, .search-results-list, .query-search-field, .label-select-field-group"))
         sub_measure()
     measure()
