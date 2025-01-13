@@ -11,13 +11,13 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "brikit-dcapt-testing"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -25,7 +25,7 @@ products = ["product-to-deploy"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "confluence-license"
+confluence_license = "AAABiw0ODAoPeNp1kVtvm0AQhd/3VyD1JVVFtGABxtJKTRbcEnFJQuI2UV4GOsSb4MVZwKn/fdfeWLmpjzvn7Mw3Z75knbTOQFrUtxx3NglnXmjx8spyqesRrhAG0ckIBmS7ik0dmwYkwr5WYr2TGO9k044oa7SOtA8sjnJA9fVuZsUbaMd9A5KB0FUJ2hb/XQu1fdPStalPUlGj7P8jtkZcoOp3I11SjtUrwaBGJLXGOM7HVYWqaK577WS2Q14JjKtQ9yBFbyqnSjyKwfyEehAbNCa90aDfsWZu2RK2f1B+r/be47pbHWB+Qr9kGad8fsF/VWMZVMG8o835t4csTEbPO2toqLzn5Lp4fqITHxZ5d7taQFQ77dM8cfyHk9uLO2amvyx/tV1jDitkvMiy+JInJ6nRywGUzpQ10PZ4iCqJWJpEZZzbqUsDPSIISYlqg0orp791cuFN4dhJPvXttPB+mFa7E5kLmWUfcXuI1fGp7jOdTBxyPqp6CT1+PPxLNHvIz8loFvae5x/gTcadMCwCFAW318ctonKVyn2USq3avIskWOkBAhR6Czh56dyC9XSFHDw6aH9g4IfizQ==X02j7"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
@@ -35,7 +35,7 @@ bamboo_license = "bamboo-license"
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after product is fully
 # installed and configured.
 jira_replica_count = 1
-confluence_replica_count = 1
+confluence_replica_count = 2
 bitbucket_replica_count = 1
 crowd_replica_count = 1
 
