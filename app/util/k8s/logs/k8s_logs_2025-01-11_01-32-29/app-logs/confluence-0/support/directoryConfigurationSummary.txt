@@ -1,0 +1,14 @@
+=== Directories configured ===
+
+Directory ID: 131073
+Name: Confluence Internal Directory
+Active: true
+Type: INTERNAL
+Created date: Thu Nov 14 09:27:42 UTC 2019
+Updated date: Thu Nov 14 09:27:42 UTC 2019
+Allowed operations: [UPDATE_USER_ATTRIBUTE, UPDATE_GROUP_ATTRIBUTE, UPDATE_ROLE, UPDATE_GROUP, CREATE_USER, DELETE_ROLE, DELETE_USER, UPDATE_USER, CREATE_ROLE, CREATE_GROUP, DELETE_GROUP, UPDATE_ROLE_ATTRIBUTE]
+Implementation class: com.atlassian.crowd.directory.InternalDirectory
+Encryption type: atlassian-security
+Attributes: 
+	user_encryption_method: atlassian-security
+
