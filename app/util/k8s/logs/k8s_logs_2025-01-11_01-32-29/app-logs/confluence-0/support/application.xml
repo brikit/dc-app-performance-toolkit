@@ -1,0 +1,4096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+  <atst-version>1.50.2</atst-version>
+  <timeZone>GMT+0</timeZone>
+  <sen>SEN-L20703679</sen>
+  <serverId>B8W5-NSG6-0BOI-D9IG</serverId>
+  <product name="Confluence" version="8.5.14"/>
+  <cluster-information>
+    <node-count>1</node-count>
+    <nodes>
+      <node id="36004297" ip-address="/10.0.1.79:5701" current-node="true"/>
+    </nodes>
+  </cluster-information>
+  <zip-configuration>
+    <support-file-size-limit>100</support-file-size-limit>
+    <support-file-constraint-lastModified>0</support-file-constraint-lastModified>
+    <zip-bundle-options>
+      <healthchecks>true</healthchecks>
+      <cache-cfg>true</cache-cfg>
+      <tomcat-access-logs>false</tomcat-access-logs>
+      <application-config>true</application-config>
+      <application-properties>true</application-properties>
+      <jfr-bundle>true</jfr-bundle>
+      <tomcat-config>true</tomcat-config>
+      <thread-dump>false</thread-dump>
+      <auth-cfg>true</auth-cfg>
+      <synchrony-config>true</synchrony-config>
+      <confluence-customisations>true</confluence-customisations>
+      <tomcat-logs>true</tomcat-logs>
+      <application-logs>true</application-logs>
+    </zip-bundle-options>
+  </zip-configuration>
+  <dark-features-enabled-information>
+    <dark-features-system-enabled>
+      <dark-feature key="atlassian.cdn.static.assets"/>
+      <dark-feature key="atlassian.webresource.twophase.js.i18n.disabled"/>
+      <dark-feature key="attachment.extracted.text.extractor"/>
+      <dark-feature key="clc.quick.create"/>
+      <dark-feature key="collaborative-audit-log"/>
+      <dark-feature key="confluence-inline-comments"/>
+      <dark-feature key="confluence-inline-comments-dangling-comment"/>
+      <dark-feature key="confluence-inline-comments-resolved"/>
+      <dark-feature key="confluence-inline-comments-rich-editor"/>
+      <dark-feature key="confluence.denormalisedpermissions"/>
+      <dark-feature key="confluence.efi.onboarding.new.templates"/>
+      <dark-feature key="confluence.efi.onboarding.rich.space.content"/>
+      <dark-feature key="confluence.fast-xml-backup-restore"/>
+      <dark-feature key="confluence.reindex.audit"/>
+      <dark-feature key="confluence.reindex.improvements"/>
+      <dark-feature key="confluence.reindex.spaces"/>
+      <dark-feature key="confluence.retention.rules"/>
+      <dark-feature key="confluence.search.improvements.ranking"/>
+      <dark-feature key="confluence.table.resizable"/>
+      <dark-feature key="confluence.view.edit.transition"/>
+      <dark-feature key="cql.search.screen"/>
+      <dark-feature key="crowd.event.transformer.directory.manager.cache"/>
+      <dark-feature key="crowd.sync.delete.user.memberships.batching.enabled"/>
+      <dark-feature key="crowd.sync.nested.groups.group.membership.changes.batching.enabled"/>
+      <dark-feature key="editor.ajax.save"/>
+      <dark-feature key="file-annotations"/>
+      <dark-feature key="file-annotations.likes"/>
+      <dark-feature key="gatekeeper-ui-v2"/>
+      <dark-feature key="graphql"/>
+      <dark-feature key="http.session.registrar"/>
+      <dark-feature key="lucene.caching.filter"/>
+      <dark-feature key="mobile.supported.version"/>
+      <dark-feature key="notification.batch"/>
+      <dark-feature key="nps.survey.inline.dialog"/>
+      <dark-feature key="pdf-preview"/>
+      <dark-feature key="previews.conversion-service"/>
+      <dark-feature key="previews.sharing"/>
+      <dark-feature key="previews.sharing.pushstate"/>
+      <dark-feature key="previews.trigger-all-file-types"/>
+      <dark-feature key="previews.versions"/>
+      <dark-feature key="pulp"/>
+      <dark-feature key="quick-reload-inline-comments-flags"/>
+      <dark-feature key="read.only.mode"/>
+      <dark-feature key="site-wide.synchrony.opt-in"/>
+      <dark-feature key="tc.tacca.dacca"/>
+      <dark-feature key="topicEventPublisher"/>
+      <dark-feature key="v2.content.name.searcher"/>
+    </dark-features-system-enabled>
+    <dark-features-site-enabled>
+      <dark-feature key="site-wide.shared-drafts"/>
+      <dark-feature key="site-wide.synchrony"/>
+    </dark-features-site-enabled>
+  </dark-features-enabled-information>
+  <plugins>
+    <plugin>
+      <key>com.atlassian.activeobjects.confluence.spi</key>
+      <name>Confluence Active Objects SPI implementation</name>
+      <version>4.1.3</version>
+      <vendor>Atlassian Software Systems</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.dynamictasklist2</key>
+      <name>Dynamic Task List 2 Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.consumer</key>
+      <name>Atlassian OAuth Consumer Plugin</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-daily-summary-email</key>
+      <name>Confluence daily summary email</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.crowd.embedded.admin</key>
+      <name>Atlassian Embedded Crowd - Administration Plugin</name>
+      <version>5.0.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.analytics.analytics-client</key>
+      <name>Analytics Client Plugin</name>
+      <version>8.3.2</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.nl_NL</key>
+      <name>Confluence Dutch (Netherlands) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.basic</key>
+      <name>Basic Macros</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-nav-links-plugin</key>
+      <name>Atlassian Navigation Links Plugin</name>
+      <version>8.1.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-page-hierarchy-plugin</key>
+      <name>confluence-page-hierarchy-plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.jira</key>
+      <name>Confluence Jira Plugin</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.search.view</key>
+      <name>Search Web Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin.upgrade</key>
+      <name>Upgrade Administration Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.atlassian-clientside-extensions-discovery</key>
+      <name>Atlassian Plugins - Client-side Extensions - Discovery</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-editor-plugin</key>
+      <name>Confluence Editor Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://confluence.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-collaborative-editor-plugin</key>
+      <name>Confluence Collaborative Editor Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-macro-browser</key>
+      <name>Confluence Macro Browser</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.restplugin</key>
+      <name>Confluence old Prototype REST API</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian Software</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/software/confluence</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.business.insights.confluence-plugin</key>
+      <name>Atlassian Data Pipeline Confluence Plugin</name>
+      <version>2.4.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.whatsnew</key>
+      <name>Confluence What&amp;apos;s New</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.extra.officeconnector</key>
+      <name>Office Connector plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.hu_HU</key>
+      <name>Confluence Hungarian (Hungary) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.graphql.atlassian-graphql-module</key>
+      <name>Atlassian GraphQL - Module Types</name>
+      <version>2.1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-backup-and-restore-ui</key>
+      <name>Confluence Backup and Restore UI Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.impresence2</key>
+      <name>IM Presence NG Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.actions</key>
+      <name>Streams Inline Actions Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-email-gateway</key>
+      <name>Confluence Email Gateway</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>INSTALLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-document-conversion-library</key>
+      <name>Confluence Document Conversion Library</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-email-resources</key>
+      <name>Confluence Email Notifications Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.information</key>
+      <name>Information Macros Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.user.menu</key>
+      <name>User Menu Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-link-browser</key>
+      <name>Confluence Link Browser</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.browse</key>
+      <name>Space Browse Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-clientside-extensions-runtime</key>
+      <name>Atlassian Plugins - Client-side Extensions - Runtime</name>
+      <version>1.2.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.tools</key>
+      <name>Space Tools Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-help-tips</key>
+      <name>atlassian-help-tips</name>
+      <version>2.0.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-webhooks</key>
+      <name>Confluence Webhooks</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.oauth.serviceprovider</key>
+      <name>Atlassian Gadgets OAuth Service Provider Plugin</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-create-content-plugin</key>
+      <name>Confluence Create Content Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-easyuser-admin</key>
+      <name>Confluence Easy-User Admin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.themes.default</key>
+      <name>Default Theme</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.livesearch</key>
+      <name>Confluence Live Search Macros Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.cleanup-hub-plugin</key>
+      <name>Cleanup Hub</name>
+      <version>1.0.9</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-sal-plugin</key>
+      <name>Confluence SAL Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian Software Systems</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.pages</key>
+      <name>Space Pages Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.da_DK</key>
+      <name>Confluence Danish (Denmark) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.synchrony-interop</key>
+      <name>Synchrony Interop Bootstrap Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-graphql-providers</key>
+      <name>Confluence GraphQL Providers</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.addonengine.analytics</key>
+      <name>Analytics for Confluence - Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.news</key>
+      <name>News Tabs</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.ru_RU</key>
+      <name>Confluence Russian (Russia) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.editor</key>
+      <name>Confluence Editor Components Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://confluence.atlassian.com/display/CONFEXT/TinyMCE+Plugin</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.masterdetail</key>
+      <name>Page Properties Macros - Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.recently-viewed-plugin</key>
+      <name>Recently Viewed Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-lookandfeel</key>
+      <name>Confluence Look And Feel Logo Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-templates</key>
+      <name>Confluence Template Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-plugins-webresource-plugin</key>
+      <name>Atlassian Plugins - Web Resources - Implementation Plugin</name>
+      <version>6.1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>3</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.attachments</key>
+      <name>Attachment Actions</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.contributors</key>
+      <name>Confluence Contributors Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>crowd.system.passwordencoders</key>
+      <name>Crowd System Password Encoders</name>
+      <version>1.0</version>
+      <vendor>Atlassian Software Systems</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-jira-metadata</key>
+      <name>Confluence Jira Metadata Plugin</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.auiplugin</key>
+      <name>Atlassian UI Plugin</name>
+      <version>9.2.2-patch-2</version>
+      <vendor>Atlassian Pty Ltd.</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.healthcheck.atlassian-healthcheck</key>
+      <name>Atlassian HealthCheck Common Module</name>
+      <version>7.0.2</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-icons</key>
+      <name>confluence-icons</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.mywork.mywork-common-plugin</key>
+      <name>Workbox - Common Plugin</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.watch-button</key>
+      <name>Confluence Watch Button</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-jira-content</key>
+      <name>Confluence and Jira Content Connector</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.status-macro</key>
+      <name>Status Macro</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.web.panels</key>
+      <name>System Web Panels</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-page-restrictions-dialog</key>
+      <name>Confluence Restrictions Dialog</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-rest-resources</key>
+      <name>Confluence REST API Resources</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin.indexing</key>
+      <name>Did You Mean Index Building Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.profile</key>
+      <name>Profile Tabs</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.soy.soy-template-plugin</key>
+      <name>Atlassian Soy - Plugin</name>
+      <version>6.0.7</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>3</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.consumer.sal</key>
+      <name>Atlassian OAuth Consumer SAL SPI Implementation</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-space-ia</key>
+      <name>Confluence Space IA Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.ja_JP</key>
+      <name>Confluence Japanese (Japan) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-a11y-help-page</key>
+      <name>Confluence Accessibility Rule Help Page</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.atlassian-failure-cache-plugin</key>
+      <name>atlassian-failure-cache-plugin</name>
+      <version>3.0.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.gadgets.spi</key>
+      <name>Gadgets Plugin SPI</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.renderer.components</key>
+      <name>Wiki Renderer Components</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.filters.core</key>
+      <name>Core Filters</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.pats.pats-plugin</key>
+      <name>Personal Access Tokens plugin</name>
+      <version>1.4.7</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.core</key>
+      <name>Confluence Core Macros</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian Software</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/software/confluence</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.applinks.applinks-plugin</key>
+      <name>Applinks - Plugin - Core</name>
+      <version>9.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-mentions-plugin</key>
+      <name>Confluence Mentions Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.sk_SK</key>
+      <name>Confluence Slovak (Slovakia) Language Pack</name>
+      <version>7.7.0.rc1-20200813063742</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.analytics-jobs-plugin</key>
+      <name>Analytics Jobs Framework</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-fixed-headers</key>
+      <name>confluence-fixed-headers</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.es_ES</key>
+      <name>Confluence Spanish (Spain) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.ko_KR</key>
+      <name>Confluence Korean (South Korea) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-user-profile</key>
+      <name>Confluence User Avatar Uploader Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.analytics.analytics-whitelist</key>
+      <name>Analytics Whitelist Plugin</name>
+      <version>3.102</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.editor.actions</key>
+      <name>Editor Actions</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.html</key>
+      <name>Confluence HTML Macros</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-like</key>
+      <name>Confluence Like Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-notifications-spi-plugin</key>
+      <name>Confluence Notifications SPI Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.aui.staging</key>
+      <name>Confluence AUI Staging</name>
+      <version>8.5.14</version>
+      <vendor>(unknown)</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.page.operations</key>
+      <name>Page Operations</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.share-page</key>
+      <name>Share Page</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.sv_SE</key>
+      <name>Confluence Swedish (Sweden) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.applinks.applinks-basicauth-plugin</key>
+      <name>Applinks - Plugin - Basic Authentication</name>
+      <version>9.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.integration.jira.jira-integration-plugin</key>
+      <name>Jira Integration :: Plugin</name>
+      <version>8.3.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.ro_RO</key>
+      <name>Confluence Romanian (Romania) Language Pack</name>
+      <version>7.7.0.rc1-20200813063742</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.header.imagelinks</key>
+      <name>Global Header Image Links</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.keyboardshortcuts</key>
+      <name>Confluence Keyboard Shortcuts Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-feature-discovery-plugin</key>
+      <name>confluence-feature-discovery-plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin.header</key>
+      <name>Administration Menu Items</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.themepress</key>
+      <name>Brikit Theme Press</name>
+      <version>5.0.2</version>
+      <vendor>Brikit</vendor>
+      <status>DISABLED</status>
+      <vendor-url>https://www.brikit.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.web.components</key>
+      <name>System Web Components</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.atlassian-oauth-service-provider-spi</key>
+      <name>Atlassian OAuth Service Provider SPI</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.admin</key>
+      <name>Space Admin Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.document-conversion-library</key>
+      <name>Document Conversion Library</name>
+      <version>2.7.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.chart</key>
+      <name>chart-plugin</name>
+      <version>18.5.5</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.zh_CN</key>
+      <name>Confluence Chinese (China) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.reliablesave</key>
+      <name>Confluence Reliable Save Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.profile</key>
+      <name>Profile Macros</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.applinks.applinks-trustedapps-plugin</key>
+      <name>Applinks - Plugin - Trusted Apps</name>
+      <version>9.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.user.menu.concise</key>
+      <name>User Menu Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.streams-spi</key>
+      <name>Streams SPI</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-labels</key>
+      <name>Confluence Labels UI</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-schedule-admin</key>
+      <name>Confluence Scheduled Job Administration UI</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.atlassian-gadgets-api-8.1.3</key>
+      <name>Atlassian Gadgets API</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.jwt.jwt-plugin</key>
+      <name>Atlassian JWT Plugin</name>
+      <version>3.3.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.profile.view</key>
+      <name>View Profile Web Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-cache-management-plugin</key>
+      <name>Confluence Cache Management Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.sticky-table-headers</key>
+      <name>Sticky Table Headers</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.applinks.applinks-cors-plugin</key>
+      <name>Applinks - Plugin - CORS</name>
+      <version>9.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-rest-navigation</key>
+      <name>Confluence REST Navigation Service</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.streams-thirdparty-plugin</key>
+      <name>Streams Third Party Provider Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-quicknav</key>
+      <name>Confluence Quicknav</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.serviceprovider</key>
+      <name>Atlassian OAuth Service Provider Plugin</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.instrumentation.atlassian-instrumentation-expose-jmx</key>
+      <name>Atlassian Instrumentation JMX plugin</name>
+      <version>3.0.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.fi_FI</key>
+      <name>Confluence Finnish (Finland) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-license-banner</key>
+      <name>Confluence License Banner</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.embedded</key>
+      <name>Embedded Gadgets Plugin</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.search.confluence-search</key>
+      <name>Confluence Search Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.help</key>
+      <name>Help Menu Items</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.advanced</key>
+      <name>Space Advanced Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams</key>
+      <name>Streams Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.rpc.confluence-json-rpc-plugin</key>
+      <name>Confluence JSON-RPC Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian Software</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.serviceprovider.sal</key>
+      <name>Atlassian OAuth Service Provider SAL SPI Implementation</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-whitelist-core-plugin</key>
+      <name>Atlassian Whitelist Core Plugin</name>
+      <version>5.0.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-default-space-content-plugin</key>
+      <name>Confluence Default Space Content Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-dashboard</key>
+      <name>confluence-dashboard</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-user-rest</key>
+      <name>Confluence User Rest</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.system-templates</key>
+      <name>System Templates</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.core</key>
+      <name>Streams Core Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.image.effects.ImageEffectsPlugin</key>
+      <name>ImageEffectsPlugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-browser-metrics</key>
+      <name>confluence-browser-metrics</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.page.temp</key>
+      <name>Content Buttons</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth2.oauth2-scopes-plugin</key>
+      <name>Atlassian OAuth 2 Scopes - Plugin</name>
+      <version>3.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.atlassian-oauth-api-5.0.12</key>
+      <name>Atlassian OAuth API</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.attachments</key>
+      <name>Confluence Attachments Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.et_EE</key>
+      <name>Confluence Estonian (Estonia) Language Pack</name>
+      <version>7.7.0.rc1-20200813063742</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-software-project</key>
+      <name>Confluence Software Project Blueprint</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.directory</key>
+      <name>Gadget Directory Plugin</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space.export.view</key>
+      <name>Space Export Web Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-rebuild-index</key>
+      <name>confluence-rebuild-index</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth2.oauth2-provider-plugin</key>
+      <name>Atlassian OAuth 2 Provider - Plugin</name>
+      <version>3.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.editor-loader</key>
+      <name>Confluence Editor Loader Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.editor</key>
+      <name>Atlassian Editor Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://confluence.atlassian.com/display/CONFEXT/TinyMCE+Plugin</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.shortcuts.atlassian-shortcuts-plugin</key>
+      <name>Atlassian Keyboard Shortcuts - Module support</name>
+      <version>2.0.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-clientside-extensions-page-bootstrapper</key>
+      <name>Atlassian Plugins - Client-side Extensions - Page Bootstrapper</name>
+      <version>1.2.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-image-attributes</key>
+      <name>Confluence Image Attributes</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.zdu.confluence-zdu-plugin</key>
+      <name>Confluence Zero Downtime Upgrade</name>
+      <version>2.0.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.avatar</key>
+      <name>Atlassian Plugins - Avatar Plugin</name>
+      <version>1.3.5</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.en_US</key>
+      <name>Confluence English (United States) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-email-tracker</key>
+      <name>Confluence Email Tracker</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-knowledge-base</key>
+      <name>Confluence Knowledge Base Blueprints Plugin</name>
+      <version>4.1.7</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.gatekeeper.gatekeeper-plugin</key>
+      <name>Inspect Permissions - Gatekeeper</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-space-directory</key>
+      <name>Confluence Space Directory</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth2.oauth2-client-plugin</key>
+      <name>Atlassian OAuth 2 Client - Plugin</name>
+      <version>3.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.activeobjects.activeobjects-plugin</key>
+      <name>ActiveObjects Plugin - OSGi Bundle</name>
+      <version>4.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.ext.newcode-macro-plugin</key>
+      <name>Code Macro Plugin</name>
+      <version>18.5.5</version>
+      <vendor>Atlassian, Inc.</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-file-notifications</key>
+      <name>Confluence File Notifications</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-roadmap-plugin</key>
+      <name>Confluence Roadmap Planner</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-page-banner</key>
+      <name>Confluence Page Banner</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.querylang.confluence-cql-plugin</key>
+      <name>Confluence CQL plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>${project.organization.url}</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin.tasks</key>
+      <name>Admin Tasks</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.lifecycle.core</key>
+      <name>Core Startup and Shutdown</name>
+      <version>1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-nav-links</key>
+      <name>Confluence Nav Links Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>${project.organization.url}</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-scheduler-spi</key>
+      <name>Confluence Scheduler SPI</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.mywork.mywork-confluence-provider-plugin</key>
+      <name>Workbox - Confluence Provider Plugin</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-ui-components</key>
+      <name>Confluence UI Components</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.web.resources</key>
+      <name>System Web Resources</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.search.contentname</key>
+      <name>Default section provider for content name search</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.converters.core</key>
+      <name>Core Path Converters</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.web.panel.renderers</key>
+      <name>System Web Panels</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.xmlrpc.bloggingrpc</key>
+      <name>Confluence Blogging RPC Plugin</name>
+      <version>4.2.0</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-macro-usage-admin-plugin</key>
+      <name>Macro Usage Admin Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-paste</key>
+      <name>Confluence Paste</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-spring-interceptor-adapter-plugin-1.1</key>
+      <name>Spring Interceptor Adapter Plugin</name>
+      <version>1.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macro.metadata.provider</key>
+      <name>Default Macro Metadata Provider</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-maintenance</key>
+      <name>Confluence Maintenance</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.blueprintmaker</key>
+      <name>Brikit Blueprint Maker</name>
+      <version>4.0</version>
+      <vendor>Brikit Inc.</vendor>
+      <status>DISABLED</status>
+      <vendor-url>http://www.brikit.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.browser.metrics.browser-metrics-plugin</key>
+      <name>Atlassian Plugins - DC Browser Metrics - Plugin</name>
+      <version>10.3.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-mobile-plugin</key>
+      <name>Mobile Plugin for Confluence Data Center and Server</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.extra.team-calendars</key>
+      <name>Team Calendars</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.quickreload</key>
+      <name>Confluence Quick Reload Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.templaterenderer.api</key>
+      <name>Atlassian Template Renderer API</name>
+      <version>5.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-monitoring-console</key>
+      <name>Confluence Monitoring Console</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.prettyurls.atlassian-pretty-urls-plugin</key>
+      <name>Atlassian Pretty URLs Plugin</name>
+      <version>4.1.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-emoticons-plugin</key>
+      <name>Confluence Emoticons Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-spaces</key>
+      <name>Confluence Spaces</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-frontend</key>
+      <name>Confluence Frontend</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.cluster.monitoring.cluster-monitoring-plugin</key>
+      <name>Atlassian Cluster Monitoring Plugin</name>
+      <version>4.1.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.upm.atlassian-universal-plugin-manager-plugin</key>
+      <name>Atlassian Universal Plugin Manager Plugin</name>
+      <version>6.1.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.authentication.atlassian-authentication-plugin</key>
+      <name>SSO for Atlassian Data Center</name>
+      <version>4.2.30</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-whitelist-ui-plugin</key>
+      <name>Atlassian Whitelist UI Plugin</name>
+      <version>5.0.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.dashboard-actions</key>
+      <name>Confluence Dashboard Actions</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.content.action.menu</key>
+      <name>Content Action Menu Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.soy</key>
+      <name>Confluence Soy Template Support</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-edge-index</key>
+      <name>Confluence Edge Index</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-rest-jersey</key>
+      <name>Confluence REST Shared Jersey Classes</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugin.notifications.notifications-module</key>
+      <name>Atlassian Notifications SPI Plugin</name>
+      <version>5.1.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-monitoring</key>
+      <name>Confluence Monitoring</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.rpc.confluence-axis-soap-plugin</key>
+      <name>Confluence Axis SOAP plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.mywork.mywork-confluence-host-plugin</key>
+      <name>Workbox - Host Plugin</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.xhtml.wikimarkup</key>
+      <name>Wiki Markup Plugin</name>
+      <version>1.0</version>
+      <vendor>Atlassian Software Systems</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.business.insights.core-plugin</key>
+      <name>Atlassian Data Pipeline Core Plugin</name>
+      <version>2.4.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-content-report-plugin</key>
+      <name>Confluence Content Report Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.rest.atlassian-rest-module</key>
+      <name>Atlassian REST - Module Types</name>
+      <version>7.1.10</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.space</key>
+      <name>Space Item Tabs</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.pl_PL</key>
+      <name>Confluence Polish (Poland) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-extractor-api-plugin</key>
+      <name>Dummy confluence extractor api plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-sortable-tables</key>
+      <name>Confluence Sortable Tables</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin.generalconfig</key>
+      <name>Search Web Interface</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>org.apache.servicemix.bundles.spring-tx-5.3.34.1</key>
+      <name>Apache ServiceMix :: Bundles :: spring-tx</name>
+      <version>5.3.34.1</version>
+      <vendor>The Apache Software Foundation</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.jquery</key>
+      <name>jquery</name>
+      <version>2.2.4.13</version>
+      <vendor>(unknown)</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.advanced</key>
+      <name>confluence-advanced-macros</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.confluence.inlineactions</key>
+      <name>Confluence Activity Streams Inline Actions Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-email-to-page</key>
+      <name>Confluence Email to Page</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>INSTALLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-highlight-actions</key>
+      <name>Page Highlight Actions - Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.streams-api</key>
+      <name>Streams API</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian Software Systems Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.userlister</key>
+      <name>User Lister</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.create</key>
+      <name>Create Menu Items</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.httpclient.atlassian-httpclient-plugin</key>
+      <name>Atlassian HTTP Client, Apache HTTP components impl</name>
+      <version>3.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.expand-macro</key>
+      <name>Confluence Expand Macro</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.audit.atlassian-audit-plugin</key>
+      <name>Atlassian Audit Plugin</name>
+      <version>1.15.2</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-retention-rules</key>
+      <name>Confluence Retention Rules</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-plugins-webresource-rest</key>
+      <name>Atlassian Plugins - Web Resources REST</name>
+      <version>6.1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>3</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.analytics.whitelist</key>
+      <name>Confluence Analytics Whitelist Plugin</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-search-ui-plugin</key>
+      <name>Confluence Search UI Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.dialog-wizard</key>
+      <name>Dialog Wizard</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.profiling.atlassian-profiling-adaptor-plugin</key>
+      <name>Atlassian Profiling - API Adaptor Plugin</name>
+      <version>4.9.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.multimedia</key>
+      <name>Confluence Multimedia Macros</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian Software</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/software/confluence</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.atlassian-project-creation-plugin</key>
+      <name>Project Creation Capability Product REST Plugin</name>
+      <version>5.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.no_NO</key>
+      <name>Confluence Norwegian (Norway) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugin.atlassian-spring-scanner-runtime</key>
+      <name>Atlassian Spring Scanner Runtime</name>
+      <version>3.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-auditing-coverage</key>
+      <name>Confluence Auditing Coverage Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.is_IS</key>
+      <name>Confluence Icelandic (Iceland) Language Pack</name>
+      <version>7.7.0.rc1-20200813063742</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-reply-to-email</key>
+      <name>Confluence Reply to Email</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>INSTALLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-avatar-plugin</key>
+      <name>Confluence Avatar Plugin</name>
+      <version>1.1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-post-upgrade-landing-page-plugin</key>
+      <name>Atlassian Confluence - Plugins - Post-Upgrade Landing Page</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.opensocial</key>
+      <name>Opensocial Plugin</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.macros.dashboard</key>
+      <name>Dashboard Macros</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-periodic-analytics-events</key>
+      <name>Confluence Periodic Analytics Events</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian Pty Ltd</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.user.hover.menu</key>
+      <name>User Hover Menu Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.getting-started</key>
+      <name>Confluence Getting Started</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.cs_CZ</key>
+      <name>Confluence Czech (Czech Republic) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>org.apache.servicemix.bundles.spring-jdbc-5.3.34.1</key>
+      <name>Apache ServiceMix :: Bundles :: spring-jdbc</name>
+      <version>5.3.34.1</version>
+      <vendor>The Apache Software Foundation</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-ui-rest</key>
+      <name>Confluence UI REST</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.labs.lucene-compat-plugin</key>
+      <name>Dummy lucene compat plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.confluencerpc</key>
+      <name>Confluence Remote API</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian Software Systems</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.diagnostics.resources</key>
+      <name>Diagnostics resources</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-darkfeatures-rest</key>
+      <name>Confluence Dark Features REST endpoint</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.search.mappers.lucene</key>
+      <name>Page Tabs</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.user.view.follow</key>
+      <name>View follow resources</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-portfolio-server-macro</key>
+      <name>Advanced Roadmaps for Jira in Confluence</name>
+      <version>1.2.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.streams.confluence</key>
+      <name>Confluence Activity Stream Plugin</name>
+      <version>9.1.40</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-business-blueprints</key>
+      <name>Confluence Business Blueprints - Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-content-notifications-plugin</key>
+      <name>Confluence Content Notifications Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-inline-tasks</key>
+      <name>Confluence Inline Tasks</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.pinboards</key>
+      <name>Brikit Pinboards</name>
+      <version>4.0-b1</version>
+      <vendor>Brikit Inc.</vendor>
+      <status>DISABLED</status>
+      <vendor-url>http://www.brikit.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.webdav</key>
+      <name>WebDAV Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.imageio-enabler-0.0.0</key>
+      <name>ImageIO enabler</name>
+      <version>0.0.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.oauth.atlassian-oauth-consumer-spi</key>
+      <name>Atlassian OAuth Consumer SPI</name>
+      <version>5.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.page</key>
+      <name>Page Tabs</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.confluence-project-creation</key>
+      <name>Project Creation Plugin SPI for Confluence</name>
+      <version>5.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugin.atlassian-spring-scanner-annotation</key>
+      <name>Atlassian Spring Scanner Annotations</name>
+      <version>3.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.migration.agent</key>
+      <name>Confluence Cloud Migration Assistant</name>
+      <version>3.10.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugin.copyspace</key>
+      <name>Confluence Copy Space Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.reconcile-unknown-attachments</key>
+      <name>Confluence Unknown Attachment Reconciliation Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.calendars</key>
+      <name>Brikit Calendar Integrations</name>
+      <version>2.0.2</version>
+      <vendor>Brikit Inc.</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.brikit.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.drag-and-drop</key>
+      <name>Confluence Drag and Drop Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.browse</key>
+      <name>Browse Menu Items</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-space-blueprints</key>
+      <name>Confluence Space Blueprints Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-files</key>
+      <name>confluence-files</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-baseurl-plugin</key>
+      <name>Confluence Base URL Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.atlassian-gadgets-spi-8.1.3</key>
+      <name>Atlassian Gadgets SPI</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.help.paths</key>
+      <name>Confluence Default Help Paths</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.pagetree</key>
+      <name>Page Tree Plugin</name>
+      <version>18.5.5</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.user.follow.list</key>
+      <name>Follow list resources</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.gadgets</key>
+      <name>Gadgets Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-inline-comments</key>
+      <name>Confluence Inline Comments</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.view-source</key>
+      <name>Confluence View Source</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.view-storage-format</key>
+      <name>Confluence View Storage Format</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.troubleshooting.plugin-confluence</key>
+      <name>Atlassian Troubleshooting and Support Tools</name>
+      <version>1.50.2</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.webhooks.atlassian-webhooks-plugin</key>
+      <name>Atlassian Webhooks Plugin</name>
+      <version>7.0.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.collaborative-editing-feedback-plugin</key>
+      <name>Collaborative Editing Feedback Plugin</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.platform.spring-velocity-support-0.1.1</key>
+      <name>spring-velocity-support</name>
+      <version>0.1.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.cacheanalytics.cache-analytics-plugin</key>
+      <name>Confluence Cache Analytics Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.issue-status-plugin</key>
+      <name>Issue Status Plugin</name>
+      <version>2.2.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.gadgets.publisher</key>
+      <name>Gadget Spec Publisher Plugin</name>
+      <version>8.1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.search.lucene.initialisation</key>
+      <name>Lucene Searcher Initializers</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.favicon.confluence-custom-favicon-plugin</key>
+      <name>Confluence Custom Favicon Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-onboarding</key>
+      <name>confluence-onboarding</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.confluence-tdm-merger</key>
+      <name>TDM Merger</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.admin.user</key>
+      <name>User Administration</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.less-transformer-plugin</key>
+      <name>Atlassian LESS Transformer Plugin</name>
+      <version>5.0.5</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>3</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.comment.action</key>
+      <name>Comment Action Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extractors.core</key>
+      <name>Core Extractors</name>
+      <version>1.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-attachment-extractors</key>
+      <name>Attachment Extractors</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.contentflow</key>
+      <name>Brikit Content Flow</name>
+      <version>3.0.1</version>
+      <vendor>Brikit Inc.</vendor>
+      <status>DISABLED</status>
+      <vendor-url>http://www.brikit.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.profile-picture</key>
+      <name>profile-picture</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.labs.atlassian-bot-killer</key>
+      <name>Atlassian Bot Session Killer</name>
+      <version>1.7.2.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.it_IT</key>
+      <name>Confluence Italian (Italy) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-mail-archiving</key>
+      <name>Confluence Mail Archiving Plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>INSTALLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.atlassian-playbook-blueprints</key>
+      <name>Atlassian Playbook Blueprints</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.listeners.core</key>
+      <name>Core Listeners</name>
+      <version>1.3</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.ratelimiting.rate-limiting-plugin</key>
+      <name>Atlassian Rate Limiting - Plugin</name>
+      <version>2.1.7</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.fr_FR</key>
+      <name>Confluence French (France) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-license-rest</key>
+      <name>License REST plugin for Confluence</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.de_DE</key>
+      <name>Confluence German (Germany) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.whisper.atlassian-whisper-plugin</key>
+      <name>Atlassian Notifications</name>
+      <version>6.0.12</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.editor-height-fix</key>
+      <name>Confluence browser fixes</name>
+      <version>2.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-view-file-macro</key>
+      <name>Confluence View File Macro</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.quickedit</key>
+      <name>Confluence Quick Edit Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-graphql-module</key>
+      <name>Confluence GraphQL API Module</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-notifications-batch-plugin</key>
+      <name>Confluence Batch Notifications plugin</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.settings.edit</key>
+      <name>Edit Settings Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.extra.layout</key>
+      <name>Layout Macros</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-previews</key>
+      <name>Confluence Previews</name>
+      <version>18.5.35</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-software-blueprints</key>
+      <name>confluence-software-blueprints</name>
+      <version>18.5.20</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>org.randombits.confluence.toc</key>
+      <name>Table of Contents Plugin</name>
+      <version>7.1.2</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.diagnostics.atlassian-diagnostics-plugin</key>
+      <name>Atlassian Diagnostics - Plugin</name>
+      <version>3.1.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.templaterenderer.atlassian-template-renderer-velocity1.6-plugin</key>
+      <name>Atlassian Template Renderer Velocity 1.6 Plugin</name>
+      <version>5.0.4</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>confluence.sections.admin</key>
+      <name>Admin Sections</name>
+      <version>1.0</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>1</framework-version>
+      <bundled>Provided</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-content-property-storage</key>
+      <name>Confluence Content Property Storage Plugin</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-mobile</key>
+      <name>Confluence Mobile Web Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-macro-usage</key>
+      <name>Confluence Macro Usage</name>
+      <version>8.5.14</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.extra.flyingpdf</key>
+      <name>Confluence PDF Export</name>
+      <version>18.5.35</version>
+      <vendor>(unknown)</vendor>
+      <status>ENABLED</status>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.brikit.targetedsearch</key>
+      <name>Brikit Targeted Search</name>
+      <version>5.0</version>
+      <vendor>Brikit Inc.</vendor>
+      <status>DISABLED</status>
+      <vendor-url>http://www.brikit.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>User installed</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-request-access-plugin</key>
+      <name>Confluence Request Access Plugin</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-remote-page-view-plugin</key>
+      <name>Confluence Remote Page View - Plugin</name>
+      <version>2.0.6</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>tac.confluence.languages.pt_BR</key>
+      <name>Confluence Portuguese (Brazil) Language Pack</name>
+      <version>8.5.0.rc1-20230808030643</version>
+      <vendor>Atlassian Community</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://translations.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.applinks.applinks-oauth-plugin</key>
+      <name>Applinks - Plugin - OAuth</name>
+      <version>9.1.8</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>https://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.plugins.confluence-denormalised-permissions</key>
+      <name>Confluence Denormalised Permissions</name>
+      <version>18.5.13</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.confluence.extra.widgetconnector</key>
+      <name>Widget Connector</name>
+      <version>18.5.29</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+    <plugin>
+      <key>com.atlassian.plugins.static-assets-url</key>
+      <name>Static Assets (CDN) Plugin</name>
+      <version>2.0.1</version>
+      <vendor>Atlassian</vendor>
+      <status>ENABLED</status>
+      <vendor-url>http://www.atlassian.com/</vendor-url>
+      <framework-version>2</framework-version>
+      <bundled>Bundled</bundled>
+    </plugin>
+  </plugins>
+  <application-links/>
+  <java-runtime-environment>
+    <java.specification.version>17</java.specification.version>
+    <sun.jnu.encoding>UTF-8</sun.jnu.encoding>
+    <com.sun.jndi.ldap.connect.pool.maxsize>0</com.sun.jndi.ldap.connect.pool.maxsize>
+    <plugin.webresource.javascript.try.catch.wrapping>true</plugin.webresource.javascript.try.catch.wrapping>
+    <sun.arch.data.model>64</sun.arch.data.model>
+    <sun.font.fontmanager>sun.awt.X11FontManager</sun.font.fontmanager>
+    <atlassian.internal.cluster.manually.managed>true</atlassian.internal.cluster.manually.managed>
+    <confluence.home>/var/atlassian/application-data/confluence</confluence.home>
+    <java.vendor.url>https://adoptium.net/</java.vendor.url>
+    <catalina.useNaming>true</catalina.useNaming>
+    <org.apache.el.GET_CLASSLOADER_USE_PRIVILEGED>false</org.apache.el.GET_CLASSLOADER_USE_PRIVILEGED>
+    <atlassian.org.osgi.framework.bootdelegation.extra>org.apache.lucene.*</atlassian.org.osgi.framework.bootdelegation.extra>
+    <sun.boot.library.path>/opt/java/openjdk/lib</sun.boot.library.path>
+    <com.atlassian.dcapt.deployment>terraform</com.atlassian.dcapt.deployment>
+    <sun.java.command>org.apache.catalina.startup.Bootstrap start</sun.java.command>
+    <jdk.debug>release</jdk.debug>
+    <java.specification.vendor>Oracle Corporation</java.specification.vendor>
+    <java.naming.factory.url.pkgs>org.apache.naming</java.naming.factory.url.pkgs>
+    <java.version.date>2024-10-15</java.version.date>
+    <java.home>/opt/java/openjdk</java.home>
+    <atlassian.plugins.startup.options>-fg</atlassian.plugins.startup.options>
+    <com.sun.jndi.ldap.connect.pool.protocol>plain ssl</com.sun.jndi.ldap.connect.pool.protocol>
+    <file.separator>/</file.separator>
+    <java.vm.compressedOopsMode>Zero based</java.vm.compressedOopsMode>
+    <line.separator></line.separator>
+    <java.vm.specification.vendor>Oracle Corporation</java.vm.specification.vendor>
+    <java.specification.name>Java Platform API Specification</java.specification.name>
+    <jdk.jfr.repository>/opt/atlassian/confluence/temp/2025_01_06_20_27_05_7</jdk.jfr.repository>
+    <package.definition>sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.</package.definition>
+    <jdk.tls.ephemeralDHKeySize>2048</jdk.tls.ephemeralDHKeySize>
+    <java.util.logging.config.file>/opt/atlassian/confluence/conf/logging.properties</java.util.logging.config.file>
+    <java.protocol.handler.pkgs>org.apache.catalina.webresources</java.protocol.handler.pkgs>
+    <sun.management.compiler>HotSpot 64-Bit Tiered Compilers</sun.management.compiler>
+    <com.sun.jndi.ldap.connect.pool.authentication>simple</com.sun.jndi.ldap.connect.pool.authentication>
+    <java.runtime.version>17.0.13+11</java.runtime.version>
+    <user.name>confluence</user.name>
+    <file.encoding>UTF-8</file.encoding>
+    <jnidispatch.path>/var/atlassian/application-data/confluence/.cache/JNA/temp/jna14788185929192672710.tmp</jnidispatch.path>
+    <confluence.context.path>/confluence</confluence.context.path>
+    <java.vendor.version>Temurin-17.0.13+11</java.vendor.version>
+    <log4j1.compatibility>true</log4j1.compatibility>
+    <org.apache.catalina.security.SecurityListener.UMASK>0022</org.apache.catalina.security.SecurityListener.UMASK>
+    <jna.loaded>true</jna.loaded>
+    <confluence.cluster.hazelcast.listenPort>5701</confluence.cluster.hazelcast.listenPort>
+    <java.io.tmpdir>/opt/atlassian/confluence/temp</java.io.tmpdir>
+    <ConfluenceHomeLogAppender.disabled>false</ConfluenceHomeLogAppender.disabled>
+    <tomcat.util.scan.StandardJarScanFilter.jarsToScan>log4j-taglib*.jar,log4j-web*.jar,log4javascript*.jar,slf4j-taglib*.jar</tomcat.util.scan.StandardJarScanFilter.jarsToScan>
+    <com.zaxxer.hikari.pool_number>1</com.zaxxer.hikari.pool_number>
+    <com.sun.jndi.ldap.connect.pool.timeout>30000</com.sun.jndi.ldap.connect.pool.timeout>
+    <tomcat.util.scan.StandardJarScanFilter.jarsToSkip>annotations-api.jar,ant-junit*.jar,ant-launcher*.jar,ant*.jar,asm-*.jar,aspectj*.jar,bcel*.jar,biz.aQute.bnd*.jar,bootstrap.jar,catalina-ant.jar,catalina-ha.jar,catalina-ssi.jar,catalina-storeconfig.jar,catalina-tribes.jar,catalina.jar,cglib-*.jar,cobertura-*.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-compress*.jar,commons-daemon.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,derby-*.jar,dom4j-*.jar,easymock-*.jar,ecj-*.jar,el-api.jar,geronimo-spec-jaxrpc*.jar,h2*.jar,ha-api-*.jar,hamcrest-*.jar,hibernate*.jar,httpclient*.jar,icu4j-*.jar,jasper-el.jar,jasper.jar,jaspic-api.jar,jaxb-*.jar,jaxen-*.jar,jaxws-rt-*.jar,jdom-*.jar,jetty-*.jar,jmx-tools.jar,jmx.jar,jsp-api.jar,jstl.jar,jta*.jar,junit-*.jar,junit.jar,log4j*.jar,mail*.jar,objenesis-*.jar,oraclepki.jar,org.hamcrest.core_*.jar,org.junit_*.jar,oro-*.jar,servlet-api-*.jar,servlet-api.jar,slf4j*.jar,taglibs-standard-spec-*.jar,tagsoup-*.jar,tomcat-api.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-i18n-*.jar,tomcat-jdbc.jar,tomcat-jni.jar,tomcat-juli-adapters.jar,tomcat-juli.jar,tomcat-util-scan.jar,tomcat-util.jar,tomcat-websocket.jar,tools.jar,unboundid-ldapsdk-*.jar,websocket-api.jar,wsdl4j*.jar,xercesImpl.jar,xml-apis.jar,xmlParserAPIs-*.jar,xmlParserAPIs.jar,xom-*.jar</tomcat.util.scan.StandardJarScanFilter.jarsToSkip>
+    <java.version>17.0.13</java.version>
+    <java.vm.specification.name>Java Virtual Machine Specification</java.vm.specification.name>
+    <atlassian.logging.cloud.enabled>false</atlassian.logging.cloud.enabled>
+    <native.encoding>UTF-8</native.encoding>
+    <java.library.path>/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib</java.library.path>
+    <java.vendor>Eclipse Adoptium</java.vendor>
+    <java.specification.maintenance.version>1</java.specification.maintenance.version>
+    <sun.io.unicode.encoding>UnicodeLittle</sun.io.unicode.encoding>
+    <tomcat.util.buf.StringCache.byte.enabled>true</tomcat.util.buf.StringCache.byte.enabled>
+    <AttachmentStorageType>file.system.based.attachments.storage</AttachmentStorageType>
+    <synchrony.by.default.enable.collab.editing.if.manually.managed>true</synchrony.by.default.enable.collab.editing.if.manually.managed>
+    <java.class.path>/opt/atlassian/confluence/bin/bootstrap.jar:/opt/atlassian/confluence/bin/tomcat-juli.jar</java.class.path>
+    <java.vm.vendor>Eclipse Adoptium</java.vm.vendor>
+    <user.timezone>Etc/UTC</user.timezone>
+    <java.vm.specification.version>17</java.vm.specification.version>
+    <os.name>Linux</os.name>
+    <confluence.clusterNodeName.useHostname>true</confluence.clusterNodeName.useHostname>
+    <user.country>US</user.country>
+    <sun.java.launcher>SUN_STANDARD</sun.java.launcher>
+    <sun.cpu.endian>little</sun.cpu.endian>
+    <user.home>/var/atlassian/application-data/confluence</user.home>
+    <user.language>en</user.language>
+    <synchrony.service.url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1</synchrony.service.url>
+    <synchrony.service.authtoken>afff373003d09339041a243de833a0f7</synchrony.service.authtoken>
+    <com.sun.jndi.ldap.connect.pool.initsize>1</com.sun.jndi.ldap.connect.pool.initsize>
+    <atlassian.plugins.enable.wait>300</atlassian.plugins.enable.wait>
+    <java.awt.headless>true</java.awt.headless>
+    <package.access>sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.</package.access>
+    <rest.annotation.scanner.jar.indexer.threshold.limit>60000</rest.annotation.scanner.jar.indexer.threshold.limit>
+    <com.sun.jndi.ldap.connect.pool.prefsize>10</com.sun.jndi.ldap.connect.pool.prefsize>
+    <java.naming.factory.initial>org.apache.naming.java.javaURLContextFactory</java.naming.factory.initial>
+    <path.separator>:</path.separator>
+    <common.loader>&amp;quot;${catalina.base}/lib&amp;quot;,&amp;quot;${catalina.base}/lib/*.jar&amp;quot;,&amp;quot;${catalina.home}/lib&amp;quot;,&amp;quot;${catalina.home}/lib/*.jar&amp;quot;</common.loader>
+    <os.version>5.10.230-223.885.amzn2.x86_64</os.version>
+    <java.runtime.name>OpenJDK Runtime Environment</java.runtime.name>
+    <org.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE>32768</org.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE>
+    <java.vm.name>OpenJDK 64-Bit Server VM</java.vm.name>
+    <jna.platform.library.path>/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/opt/java/openjdk/lib:/opt/java/openjdk/lib/server</jna.platform.library.path>
+    <synchrony.enable.xhr.fallback>true</synchrony.enable.xhr.fallback>
+    <com.atlassian.plugin.shutdown.asynchronously>false</com.atlassian.plugin.shutdown.asynchronously>
+    <java.vendor.url.bug>https://github.com/adoptium/adoptium-support/issues</java.vendor.url.bug>
+    <upm.plugin.upload.enabled>true</upm.plugin.upload.enabled>
+    <catalina.home>/opt/atlassian/confluence</catalina.home>
+    <atlassian.enable.spring.strong.cache.bean.metadata.flush>true</atlassian.enable.spring.strong.cache.bean.metadata.flush>
+    <user.dir>/var/atlassian/application-data/confluence</user.dir>
+    <os.arch>amd64</os.arch>
+    <atlassian.enable.spring.strong.cache.bean.metadata>true</atlassian.enable.spring.strong.cache.bean.metadata>
+    <catalina.base>/opt/atlassian/confluence</catalina.base>
+    <java.util.logging.manager>org.apache.juli.ClassLoaderLogManager</java.util.logging.manager>
+    <java.vm.info>mixed mode, sharing</java.vm.info>
+    <java.vm.version>17.0.13+11</java.vm.version>
+    <sun.java2d.opengl>true</sun.java2d.opengl>
+    <java.class.version>61.0</java.class.version>
+    <virtual-machine-arguments>--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/atlassian/confluence/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0022 -Datlassian.plugins.startup.options=-fg -Dorg.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE=32768 -Dconfluence.context.path=/confluence -Dsynchrony.enable.xhr.fallback=true -Datlassian.plugins.enable.wait=300 -Djava.awt.headless=true -Xlog:gc*:file=/opt/atlassian/confluence/logs/gc-%t.log:tags,time,uptime,level:filecount=5,filesize=2M -XX:G1ReservePercent=20 -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.locale=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-exports=java.base/sun.security.action=ALL-UNNAMED --add-exports=java.base/sun.util.calendar=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.xml/com.sun.org.apache.xml.internal.utils=ALL-UNNAMED --add-exports=java.desktop/sun.font=ALL-UNNAMED --add-exports=java.base/sun.security.util=ALL-UNNAMED -XX:ReservedCodeCacheSize=256m -Xms12288m -Xmx12288m -Dconfluence.home=/var/atlassian/application-data/confluence -Dconfluence.cluster.hazelcast.listenPort=5701 -Dsynchrony.service.url=http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1 -Dsynchrony.by.default.enable.collab.editing.if.manually.managed=true -Dconfluence.clusterNodeName.useHostname=true -Datlassian.logging.cloud.enabled=false -Dcom.atlassian.dcapt.deployment=terraform -Dupm.plugin.upload.enabled=true -XX:ActiveProcessorCount=6 -DConfluenceHomeLogAppender.disabled=false -Dignore.endorsed.dirs= -Dcatalina.base=/opt/atlassian/confluence -Dcatalina.home=/opt/atlassian/confluence -Djava.io.tmpdir=/opt/atlassian/confluence/temp</virtual-machine-arguments>
+    <application-server>Apache Tomcat/9.0.91</application-server>
+    <heap-used>12,884,901,888</heap-used>
+    <heap-available>9,087,502,616</heap-available>
+    <percent-heap-used>29%</percent-heap-used>
+    <max-heap>12,884,901,888</max-heap>
+    <permgen-used>Unknown</permgen-used>
+    <max-permgen>Unknown</max-permgen>
+  </java-runtime-environment>
+  <environment-variables>
+    <PATH>/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</PATH>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_OUT>32766</CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_OUT>
+    <ATL_JDBC_URL>jdbc:postgresql://atlas-brikit-dcapt-testing-confluence-db.c2lrlzvsub3q.us-east-2.rds.amazonaws.com:5432/confluence</ATL_JDBC_URL>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_RPCBIND>111</CONFLUENCE_NFS_SERVER_SERVICE_PORT_RPCBIND>
+    <CONFLUENCE_NFS_SERVER_PORT_111_TCP_PORT>111</CONFLUENCE_NFS_SERVER_PORT_111_TCP_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32765_UDP_ADDR>
+    <ATL_SETUP_TYPE>cluster</ATL_SETUP_TYPE>
+    <APP_NAME>confluence</APP_NAME>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_20048_TCP_ADDR>
+    <CONFLUENCE_PORT_5701_TCP_PROTO>tcp</CONFLUENCE_PORT_5701_TCP_PROTO>
+    <CONFLUENCE_SYNCHRONY_PORT_80_TCP>tcp://172.20.44.157:80</CONFLUENCE_SYNCHRONY_PORT_80_TCP>
+    <CONFLUENCE_SERVICE_PORT_HAZELCAST>5701</CONFLUENCE_SERVICE_PORT_HAZELCAST>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_32766_UDP_PROTO>
+    <UMASK>0022</UMASK>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_OUT_UDP>32766</CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_OUT_UDP>
+    <RUN_USER>confluence</RUN_USER>
+    <CONFLUENCE_SYNCHRONY_SERVICE_HOST>172.20.44.157</CONFLUENCE_SYNCHRONY_SERVICE_HOST>
+    <ATL_JDBC_USER>atlconfluence</ATL_JDBC_USER>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_TCP_PORT>32766</CONFLUENCE_NFS_SERVER_PORT_32766_TCP_PORT>
+    <PWD>/var/atlassian/application-data/confluence</PWD>
+    <CONFLUENCE_NFS_SERVER_PORT_111_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_111_UDP_PROTO>
+    <CONFLUENCE_CONTEXT_PATH>/confluence</CONFLUENCE_CONTEXT_PATH>
+    <RUN_UID>2002</RUN_UID>
+    <LANGUAGE>en_US:en</LANGUAGE>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_TCP_PORT>32767</CONFLUENCE_NFS_SERVER_PORT_32767_TCP_PORT>
+    <ATL_LICENSE_KEY>AAABiw0ODAoPeNp1kVtvm0AQhd/3VyD1JVVFtGABxtJKTRbcEnFJQuI2UV4GOsSb4MVZwKn/fdfeWLmpjzvn7Mw3Z75knbTOQFrUtxx3NglnXmjx8spyqesRrhAG0ckIBmS7ik0dmwYkwr5WYr2TGO9k044oa7SOtA8sjnJA9fVuZsUbaMd9A5KB0FUJ2hb/XQu1fdPStalPUlGj7P8jtkZcoOp3I11SjtUrwaBGJLXGOM7HVYWqaK577WS2Q14JjKtQ9yBFbyqnSjyKwfyEehAbNCa90aDfsWZu2RK2f1B+r/be47pbHWB+Qr9kGad8fsF/VWMZVMG8o835t4csTEbPO2toqLzn5Lp4fqITHxZ5d7taQFQ77dM8cfyHk9uLO2amvyx/tV1jDitkvMiy+JInJ6nRywGUzpQ10PZ4iCqJWJpEZZzbqUsDPSIISYlqg0orp791cuFN4dhJPvXttPB+mFa7E5kLmWUfcXuI1fGp7jOdTBxyPqp6CT1+PPxLNHvIz8loFvae5x/gTcadMCwCFAW318ctonKVyn2USq3avIskWOkBAhR6Czh56dyC9XSFHDw6aH9g4IfizQ==X02j7</ATL_LICENSE_KEY>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_32765_UDP_PROTO>
+    <CATALINA_OPTS>-Datlassian.plugins.startup.options=&amp;apos;-fg&amp;apos; -Dorg.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE=32768 -Dconfluence.context.path=/confluence -Dsynchrony.enable.xhr.fallback=true -Datlassian.plugins.enable.wait=300 -Djava.awt.headless=true -Xlog:gc*:file=/opt/atlassian/confluence/logs/gc-%t.log:tags,time,uptime,level:filecount=5,filesize=2M -XX:G1ReservePercent=20 -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+IgnoreUnrecognizedVMOptions @/opt/atlassian/confluence/confluence/WEB-INF/jpms-args.txt -XX:ReservedCodeCacheSize=256m -Xms12288m -Xmx12288m -Dconfluence.home=/var/atlassian/application-data/confluence -Dconfluence.cluster.hazelcast.listenPort=5701 -Dsynchrony.service.url=http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1 -Dsynchrony.by.default.enable.collab.editing.if.manually.managed=true -Dconfluence.clusterNodeName.useHostname=true -Datlassian.logging.cloud.enabled=false -Dcom.atlassian.dcapt.deployment=terraform -Dupm.plugin.upload.enabled=true -XX:ActiveProcessorCount=6 -DConfluenceHomeLogAppender.disabled=false</CATALINA_OPTS>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32766_UDP_ADDR>
+    <CONFLUENCE_SYNCHRONY_SERVICE_PORT_HAZELCAST>5701</CONFLUENCE_SYNCHRONY_SERVICE_PORT_HAZELCAST>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_UDP_PORT>20048</CONFLUENCE_NFS_SERVER_PORT_20048_UDP_PORT>
+    <CONFLUENCE_SYNCHRONY_SERVICE_PORT_HTTP>80</CONFLUENCE_SYNCHRONY_SERVICE_PORT_HTTP>
+    <ATL_CLUSTER_TYPE>kubernetes</ATL_CLUSTER_TYPE>
+    <CONFLUENCE_SYNCHRONY_PORT_5701_TCP_ADDR>172.20.44.157</CONFLUENCE_SYNCHRONY_PORT_5701_TCP_ADDR>
+    <CONFLUENCE_NFS_SERVER_PORT_111_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_111_UDP_ADDR>
+    <LC_ALL>en_US.UTF-8</LC_ALL>
+    <CONFLUENCE_SYNCHRONY_PORT>tcp://172.20.44.157:80</CONFLUENCE_SYNCHRONY_PORT>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_NFS_UDP>2049</CONFLUENCE_NFS_SERVER_SERVICE_PORT_NFS_UDP>
+    <KUBERNETES_SERVICE_PORT_HTTPS>443</KUBERNETES_SERVICE_PORT_HTTPS>
+    <KUBERNETES_NAMESPACE>atlassian</KUBERNETES_NAMESPACE>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_TCP_PORT>2049</CONFLUENCE_NFS_SERVER_PORT_2049_TCP_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_TCP>tcp://172.20.2.4:32766</CONFLUENCE_NFS_SERVER_PORT_32766_TCP>
+    <SHLVL>0</SHLVL>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_NFS>2049</CONFLUENCE_NFS_SERVER_SERVICE_PORT_NFS>
+    <ATL_TOMCAT_CONTEXTPATH>/confluence</ATL_TOMCAT_CONTEXTPATH>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD>32765</CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD>
+    <KUBERNETES_PORT>tcp://172.20.0.1:443</KUBERNETES_PORT>
+    <JAVA_HOME>/opt/java/openjdk</JAVA_HOME>
+    <ATL_SNAPSHOT_USED>true</ATL_SNAPSHOT_USED>
+    <CONFLUENCE_SYNCHRONY_SERVICE_PORT>80</CONFLUENCE_SYNCHRONY_SERVICE_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_UDP>udp://172.20.2.4:32765</CONFLUENCE_NFS_SERVER_PORT_32765_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_UDP>udp://172.20.2.4:32767</CONFLUENCE_NFS_SERVER_PORT_32767_UDP>
+    <CONFLUENCE_PORT_5701_TCP_PORT>5701</CONFLUENCE_PORT_5701_TCP_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32767_UDP_ADDR>
+    <CONFLUENCE_PORT_80_TCP_PROTO>tcp</CONFLUENCE_PORT_80_TCP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_UDP_PORT>2049</CONFLUENCE_NFS_SERVER_PORT_2049_UDP_PORT>
+    <CONFLUENCE_SERVICE_PORT>80</CONFLUENCE_SERVICE_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_111_UDP_PORT>111</CONFLUENCE_NFS_SERVER_PORT_111_UDP_PORT>
+    <CONFLUENCE_NFS_SERVER_SERVICE_HOST>172.20.2.4</CONFLUENCE_NFS_SERVER_SERVICE_HOST>
+    <SET_PERMISSIONS>true</SET_PERMISSIONS>
+    <JAVA_VERSION>jdk-17.0.13+11</JAVA_VERSION>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_32767_TCP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_2049_UDP_PROTO>
+    <KUBERNETES_PORT_443_TCP_ADDR>172.20.0.1</KUBERNETES_PORT_443_TCP_ADDR>
+    <ATL_CLUSTER_NAME>confluence</ATL_CLUSTER_NAME>
+    <ATL_TOMCAT_PORT>8090</ATL_TOMCAT_PORT>
+    <CONFLUENCE_PORT_5701_TCP>tcp://172.20.230.125:5701</CONFLUENCE_PORT_5701_TCP>
+    <KUBERNETES_PORT_443_TCP_PROTO>tcp</KUBERNETES_PORT_443_TCP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_32767_UDP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_2049_TCP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_TCP_PORT>32765</CONFLUENCE_NFS_SERVER_PORT_32765_TCP_PORT>
+    <ATL_FORCE_CFG_UPDATE>true</ATL_FORCE_CFG_UPDATE>
+    <CONFLUENCE_SYNCHRONY_PORT_80_TCP_PORT>80</CONFLUENCE_SYNCHRONY_PORT_80_TCP_PORT>
+    <CONFLUENCE_SERVICE_HOST>172.20.230.125</CONFLUENCE_SERVICE_HOST>
+    <CONFLUENCE_PORT>tcp://172.20.230.125:80</CONFLUENCE_PORT>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_MOUNTD>20048</CONFLUENCE_NFS_SERVER_SERVICE_PORT_MOUNTD>
+    <CONFLUENCE_SYNCHRONY_PORT_5701_TCP>tcp://172.20.44.157:5701</CONFLUENCE_SYNCHRONY_PORT_5701_TCP>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT>2049</CONFLUENCE_NFS_SERVER_SERVICE_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32766_TCP_ADDR>
+    <JVM_MAXIMUM_MEMORY>12288m</JVM_MAXIMUM_MEMORY>
+    <CATALINA_PID>/opt/atlassian/confluence/work/catalina.pid</CATALINA_PID>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_UDP_PROTO>udp</CONFLUENCE_NFS_SERVER_PORT_20048_UDP_PROTO>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_TCP_PORT>20048</CONFLUENCE_NFS_SERVER_PORT_20048_TCP_PORT>
+    <JVM_SUPPORT_RECOMMENDED_ARGS>-Dconfluence.cluster.hazelcast.listenPort=5701 -Dsynchrony.service.url=http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1 -Dsynchrony.by.default.enable.collab.editing.if.manually.managed=true -Dconfluence.clusterNodeName.useHostname=true -Datlassian.logging.cloud.enabled=false -Dcom.atlassian.dcapt.deployment=terraform -Dupm.plugin.upload.enabled=true -XX:ActiveProcessorCount=6</JVM_SUPPORT_RECOMMENDED_ARGS>
+    <RUN_GROUP>confluence</RUN_GROUP>
+    <RUN_GID>2002</RUN_GID>
+    <CONFLUENCE_INSTALL_DIR>/opt/atlassian/confluence</CONFLUENCE_INSTALL_DIR>
+    <ATL_SETUP_STEP>complete</ATL_SETUP_STEP>
+    <CONFLUENCE_NFS_SERVER_PORT_111_UDP>udp://172.20.2.4:111</CONFLUENCE_NFS_SERVER_PORT_111_UDP>
+    <ATL_TOMCAT_ACCESS_LOG>true</ATL_TOMCAT_ACCESS_LOG>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_UDP>32765</CONFLUENCE_NFS_SERVER_SERVICE_PORT_STATD_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_UDP_PORT>32765</CONFLUENCE_NFS_SERVER_PORT_32765_UDP_PORT>
+    <START_CONFLUENCE_JAVA_OPTS>-Datlassian.plugins.startup.options=&amp;apos;-fg&amp;apos;</START_CONFLUENCE_JAVA_OPTS>
+    <CONFLUENCE_SYNCHRONY_PORT_5701_TCP_PORT>5701</CONFLUENCE_SYNCHRONY_PORT_5701_TCP_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_111_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_111_TCP_ADDR>
+    <LOGNAME>confluence</LOGNAME>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_TCP>tcp://172.20.2.4:2049</CONFLUENCE_NFS_SERVER_PORT_2049_TCP>
+    <CONFLUENCE_VERSION>8.5.14</CONFLUENCE_VERSION>
+    <KUBERNETES_PORT_443_TCP>tcp://172.20.0.1:443</KUBERNETES_PORT_443_TCP>
+    <ATL_DB_TYPE>postgresql</ATL_DB_TYPE>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_UDP_PORT>32766</CONFLUENCE_NFS_SERVER_PORT_32766_UDP_PORT>
+    <SHELL>/bin/bash</SHELL>
+    <CONFLUENCE_NFS_SERVER_PORT>tcp://172.20.2.4:2049</CONFLUENCE_NFS_SERVER_PORT>
+    <OLDPWD>/opt/atlassian/confluence</OLDPWD>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_TCP>tcp://172.20.2.4:32765</CONFLUENCE_NFS_SERVER_PORT_32765_TCP>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32767_TCP_ADDR>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_TCP>tcp://172.20.2.4:32767</CONFLUENCE_NFS_SERVER_PORT_32767_TCP>
+    <CONFLUENCE_SYNCHRONY_PORT_80_TCP_PROTO>tcp</CONFLUENCE_SYNCHRONY_PORT_80_TCP_PROTO>
+    <CONFLUENCE_SERVICE_PORT_HTTP>80</CONFLUENCE_SERVICE_PORT_HTTP>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_20048_UDP_ADDR>
+    <CONFLUENCE_PORT_80_TCP>tcp://172.20.230.125:80</CONFLUENCE_PORT_80_TCP>
+    <CONFLUENCE_NFS_SERVER_PORT_111_TCP>tcp://172.20.2.4:111</CONFLUENCE_NFS_SERVER_PORT_111_TCP>
+    <JVM_MINIMUM_MEMORY>12288m</JVM_MINIMUM_MEMORY>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_LOCKD>32767</CONFLUENCE_NFS_SERVER_SERVICE_PORT_LOCKD>
+    <CONFLUENCE_SYNCHRONY_PORT_5701_TCP_PROTO>tcp</CONFLUENCE_SYNCHRONY_PORT_5701_TCP_PROTO>
+    <CONFLUENCE_PORT_5701_TCP_ADDR>172.20.230.125</CONFLUENCE_PORT_5701_TCP_ADDR>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_UDP>udp://172.20.2.4:20048</CONFLUENCE_NFS_SERVER_PORT_20048_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_32765_TCP_PROTO>
+    <ATL_PRODUCT_HOME_SHARED>/var/atlassian/application-data/shared-home</ATL_PRODUCT_HOME_SHARED>
+    <CONFLUENCE_NFS_SERVER_PORT_111_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_111_TCP_PROTO>
+    <CONFLUENCE_PORT_80_TCP_ADDR>172.20.230.125</CONFLUENCE_PORT_80_TCP_ADDR>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_32766_TCP_PROTO>
+    <CONFLUENCE_HOME>/var/atlassian/application-data/confluence</CONFLUENCE_HOME>
+    <CONFLUENCE_NFS_SERVER_PORT_32767_UDP_PORT>32767</CONFLUENCE_NFS_SERVER_PORT_32767_UDP_PORT>
+    <ATL_BUILD_NUMBER>9012</ATL_BUILD_NUMBER>
+    <ATL_PROXY_NAME>ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com</ATL_PROXY_NAME>
+    <CONFLUENCE_PORT_80_TCP_PORT>80</CONFLUENCE_PORT_80_TCP_PORT>
+    <KUBERNETES_SERVICE_HOST>172.20.0.1</KUBERNETES_SERVICE_HOST>
+    <LANG>en_US.UTF-8</LANG>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_LOCKD_UDP>32767</CONFLUENCE_NFS_SERVER_SERVICE_PORT_LOCKD_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_2049_TCP_ADDR>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_TCP_PROTO>tcp</CONFLUENCE_NFS_SERVER_PORT_20048_TCP_PROTO>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_MOUNTD_UDP>20048</CONFLUENCE_NFS_SERVER_SERVICE_PORT_MOUNTD_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_20048_TCP>tcp://172.20.2.4:20048</CONFLUENCE_NFS_SERVER_PORT_20048_TCP>
+    <CONFLUENCE_NFS_SERVER_PORT_32766_UDP>udp://172.20.2.4:32766</CONFLUENCE_NFS_SERVER_PORT_32766_UDP>
+    <CONFLUENCE_NFS_SERVER_PORT_32765_TCP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_32765_TCP_ADDR>
+    <CONFLUENCE_SYNCHRONY_PORT_80_TCP_ADDR>172.20.44.157</CONFLUENCE_SYNCHRONY_PORT_80_TCP_ADDR>
+    <JVM_RESERVED_CODE_CACHE_SIZE>256m</JVM_RESERVED_CODE_CACHE_SIZE>
+    <HAZELCAST_KUBERNETES_SERVICE_NAME>confluence</HAZELCAST_KUBERNETES_SERVICE_NAME>
+    <CONFLUENCE_NFS_SERVER_SERVICE_PORT_RPCBIND_UDP>111</CONFLUENCE_NFS_SERVER_SERVICE_PORT_RPCBIND_UDP>
+    <JDK_JAVA_OPTIONS>--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED</JDK_JAVA_OPTIONS>
+    <USER>confluence</USER>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_UDP_ADDR>172.20.2.4</CONFLUENCE_NFS_SERVER_PORT_2049_UDP_ADDR>
+    <KUBERNETES_SERVICE_PORT>443</KUBERNETES_SERVICE_PORT>
+    <HAZELCAST_KUBERNETES_SERVICE_PORT>5701</HAZELCAST_KUBERNETES_SERVICE_PORT>
+    <ATL_PROXY_PORT>80</ATL_PROXY_PORT>
+    <HOSTNAME>confluence-0</HOSTNAME>
+    <KUBERNETES_PORT_443_TCP_PORT>443</KUBERNETES_PORT_443_TCP_PORT>
+    <CONFLUENCE_NFS_SERVER_PORT_2049_UDP>udp://172.20.2.4:2049</CONFLUENCE_NFS_SERVER_PORT_2049_UDP>
+    <CONFLUENCE_LOG_STDOUT>false</CONFLUENCE_LOG_STDOUT>
+    <HOME>/var/atlassian/application-data/confluence</HOME>
+  </environment-variables>
+  <operating-system>
+    <os-name>Linux</os-name>
+    <os-architecture>amd64</os-architecture>
+    <os-version>5.10.230-223.885.amzn2.x86_64</os-version>
+    <available-processors>6</available-processors>
+    <system-load-average>0.562</system-load-average>
+    <committed-virtual-memory>48,234,692,608</committed-virtual-memory>
+    <total-swap-space>0</total-swap-space>
+    <free-swap-space>0</free-swap-space>
+    <total-physical-memory>31,875,043,328</total-physical-memory>
+    <free-physical-memory>7,301,091,328</free-physical-memory>
+    <system-cpu-load>17%</system-cpu-load>
+    <process-cpu-load>17%</process-cpu-load>
+    <max-file-descriptor>1,048,576</max-file-descriptor>
+    <open-file-descriptor>1,249</open-file-descriptor>
+    <max-user-processes>0</max-user-processes>
+    <os-distribution>
+      <DISTRIB_ID>Ubuntu</DISTRIB_ID>
+      <DISTRIB_RELEASE>24.04</DISTRIB_RELEASE>
+      <DISTRIB_CODENAME>noble</DISTRIB_CODENAME>
+      <DISTRIB_DESCRIPTION>Ubuntu 24.04.1 LTS</DISTRIB_DESCRIPTION>
+      <PRETTY_NAME>Ubuntu 24.04.1 LTS</PRETTY_NAME>
+      <NAME>Ubuntu</NAME>
+      <VERSION_ID>24.04</VERSION_ID>
+      <VERSION>24.04.1 LTS (Noble Numbat)</VERSION>
+      <VERSION_CODENAME>noble</VERSION_CODENAME>
+      <ID>ubuntu</ID>
+      <ID_LIKE>debian</ID_LIKE>
+      <HOME_URL>https://www.ubuntu.com/</HOME_URL>
+      <SUPPORT_URL>https://help.ubuntu.com/</SUPPORT_URL>
+      <BUG_REPORT_URL>https://bugs.launchpad.net/ubuntu/</BUG_REPORT_URL>
+      <PRIVACY_POLICY_URL>https://www.ubuntu.com/legal/terms-and-policies/privacy-policy</PRIVACY_POLICY_URL>
+      <UBUNTU_CODENAME>noble</UBUNTU_CODENAME>
+      <LOGO>ubuntu-logo</LOGO>
+    </os-distribution>
+  </operating-system>
+  <database-information>
+    <driver-class>com.atlassian.confluence.status.service.systeminfo.DatabaseInfo</driver-class>
+    <dialect>com.atlassian.confluence.impl.hibernate.dialect.PostgreSQLDialect</dialect>
+    <driver-name>org.postgresql.Driver</driver-name>
+    <driver-version>42.5.6</driver-version>
+    <stp.properties.db.example.Latency>0</stp.properties.db.example.Latency>
+    <transaction-isolation>Read committed</transaction-isolation>
+    <database-name>PostgreSQL</database-name>
+    <connection-url>jdbc:postgresql://atlas-brikit-dcapt-testing-confluence-db.c2lrlzvsub3q.us-east-2.rds.amazonaws.com:5432/confluence</connection-url>
+    <database-version>14.11</database-version>
+  </database-information>
+  <application-information>
+    <base-url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/confluence</base-url>
+    <build-number>9012</build-number>
+    <home-directory>/var/atlassian/application-data/confluence</home-directory>
+    <server-id>B8W5-NSG6-0BOI-D9IG</server-id>
+    <start-time>Mon Jan 06 20:25:32 UTC 2025</start-time>
+    <sen>SEN-L20703679</sen>
+    <uptime>4 days, 3 hours, 40 minutes, 46 seconds</uptime>
+    <version>8.5.14</version>
+    <attachment-storage>file.system.based.attachments.storage</attachment-storage>
+    <max-attachment-size>104857600</max-attachment-size>
+    <path>/media/atl/confluence/shared-home/backups</path>
+    <captcha-enabled>false</captcha-enabled>
+    <date-format-pattern>yyyy_MM_dd</date-format-pattern>
+    <file-prefix>backup-</file-prefix>
+    <default-encoding>UTF-8</default-encoding>
+    <default-locale>en_GB</default-locale>
+    <indexing-language>english</indexing-language>
+    <max-attachments-in-ui>5</max-attachments-in-ui>
+    <max-rss-items>200</max-rss-items>
+    <max-quicknav-requests>40</max-quicknav-requests>
+    <time-zone>time.zone.Etc.UTC</time-zone>
+    <system-date>Saturday, 11 January 2025</system-date>
+    <system-time>00:06:19</system-time>
+  </application-information>
+  <system-properties>
+    <system.date>Saturday, 11 January 2025</system.date>
+    <system.time>00:06:19</system.time>
+    <storage.type>FILESYSTEM</storage.type>
+    <storage.version>V4</storage.version>
+    <system.installation.date>Thursday, November 14, 2019</system.installation.date>
+    <system.uptime>4 days, 3 hours, 40 minutes, 47 seconds</system.uptime>
+    <system.version>8.5.14</system.version>
+    <build.number>9012</build.number>
+    <server.base.url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/confluence</server.base.url>
+    <confluence.home>/var/atlassian/application-data/confluence</confluence.home>
+    <server.id>B8W5-NSG6-0BOI-D9IG</server.id>
+    <license.support.entitlement.number.label>SEN-L20703679</license.support.entitlement.number.label>
+    <access.mode>READ_WRITE</access.mode>
+  </system-properties>
+  <synchrony-configuration>
+    <synchrony-enabled>true</synchrony-enabled>
+    <shared-drafts-enabled>true</shared-drafts-enabled>
+    <synchrony-explicitly-disabled>false</synchrony-explicitly-disabled>
+    <shared-drafts-explicitly-disabled>false</shared-drafts-explicitly-disabled>
+    <synchrony-production-override>false</synchrony-production-override>
+    <synchrony-internal-url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1</synchrony-internal-url>
+    <synchrony-internal-port>0</synchrony-internal-port>
+    <synchrony-external-url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/v1</synchrony-external-url>
+    <synchrony-resources-url>http://ae462ca26419b4b839d0c28b4c303929-2114152797.us-east-2.elb.amazonaws.com/synchrony/resources</synchrony-resources-url>
+    <synchrony-proxy-enabled>false</synchrony-proxy-enabled>
+    <synchrony-proxy-running>false</synchrony-proxy-running>
+  </synchrony-configuration>
+  <synchrony-environment>
+    <Host>127.0.0.1</Host>
+    <Port>8091</Port>
+    <AlephPort>25500</AlephPort>
+    <AlephBind>localhost</AlephBind>
+    <ContextPath>/synchrony</ContextPath>
+    <HazelcastPort>5701</HazelcastPort>
+    <ClusterImpl>none</ClusterImpl>
+    <Memory>2g</Memory>
+    <StackSpace>2048k</StackSpace>
+  </synchrony-environment>
+  <cdn-configuration>
+    <cdn-enabled>null</cdn-enabled>
+    <cdn-url>null</cdn-url>
+  </cdn-configuration>
+  <java-vm-memory-statistics>
+    <permgen-available>0.0B</permgen-available>
+    <percent-heap-used>70% Free</percent-heap-used>
+    <stp.properties.java.permgen.percent.used>-0% Free</stp.properties.java.permgen.percent.used>
+    <max-permgen>-1.0B</max-permgen>
+    <permgen-used>-1.0B</permgen-used>
+  </java-vm-memory-statistics>
+  <modifications>
+    <removed>No files removed</removed>
+    <modified>WEB-INF/classes/seraph-config.xml</modified>
+  </modifications>
+  <usage>
+    <usage.content.total>9752320</usage.content.total>
+    <usage.content.current>9626990</usage.content.current>
+    <groups>28</groups>
+    <users>5005</users>
+    <usage.global.spaces>5007</usage.global.spaces>
+    <usage.personal.spaces>0</usage.personal.spaces>
+    <usage.total.spaces>5007</usage.total.spaces>
+  </usage>
+  <installed-languges>
+    <cs_CZ>
+      <name>cs_CZ</name>
+      <country>CZ</country>
+    </cs_CZ>
+    <da_DK>
+      <name>da_DK</name>
+      <country>DK</country>
+    </da_DK>
+    <de_DE>
+      <name>de_DE</name>
+      <country>DE</country>
+    </de_DE>
+    <et_EE>
+      <name>et_EE</name>
+      <country>EE</country>
+    </et_EE>
+    <en_GB>
+      <name>en_GB</name>
+      <country>GB</country>
+    </en_GB>
+    <en_US>
+      <name>en_US</name>
+      <country>US</country>
+    </en_US>
+    <es_ES>
+      <name>es_ES</name>
+      <country>ES</country>
+    </es_ES>
+    <fr_FR>
+      <name>fr_FR</name>
+      <country>FR</country>
+    </fr_FR>
+    <is_IS>
+      <name>is_IS</name>
+      <country>IS</country>
+    </is_IS>
+    <it_IT>
+      <name>it_IT</name>
+      <country>IT</country>
+    </it_IT>
+    <hu_HU>
+      <name>hu_HU</name>
+      <country>HU</country>
+    </hu_HU>
+    <nl_NL>
+      <name>nl_NL</name>
+      <country>NL</country>
+    </nl_NL>
+    <no_NO>
+      <name>no_NO</name>
+      <country>NO</country>
+    </no_NO>
+    <pl_PL>
+      <name>pl_PL</name>
+      <country>PL</country>
+    </pl_PL>
+    <pt_BR>
+      <name>pt_BR</name>
+      <country>BR</country>
+    </pt_BR>
+    <ro_RO>
+      <name>ro_RO</name>
+      <country>RO</country>
+    </ro_RO>
+    <sk_SK>
+      <name>sk_SK</name>
+      <country>SK</country>
+    </sk_SK>
+    <fi_FI>
+      <name>fi_FI</name>
+      <country>FI</country>
+    </fi_FI>
+    <sv_SE>
+      <name>sv_SE</name>
+      <country>SE</country>
+    </sv_SE>
+    <ru_RU>
+      <name>ru_RU</name>
+      <country>RU</country>
+    </ru_RU>
+    <zh_CN>
+      <name>zh_CN</name>
+      <country>CN</country>
+    </zh_CN>
+    <ja_JP>
+      <name>ja_JP</name>
+      <country>JP</country>
+    </ja_JP>
+    <ko_KR>
+      <name>ko_KR</name>
+      <country>KR</country>
+    </ko_KR>
+  </installed-languges>
+  <license-details>
+    <organisation>Brikit</organisation>
+    <license-type>COMMERCIAL</license-type>
+    <license-period>Wed Feb 05 13:00:00 UTC 2025</license-period>
+    <licensed-users>-1</licensed-users>
+    <server-id>B8W5-NSG6-0BOI-D9IG</server-id>
+    <sen>SEN-L20703679</sen>
+    <clustered>true</clustered>
+    <active-users>5005</active-users>
+  </license-details>
+  <upgrade-recovery-files/>
+</properties>

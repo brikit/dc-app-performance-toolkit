@@ -11,13 +11,13 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "brikit-dcapt-testing"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -25,7 +25,7 @@ products = ["product-to-deploy"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "confluence-license"
+confluence_license = "AAABiw0ODAoPeNp1kVtvm0AQhd/3VyD1JVVFtGABxtJKTRbcEnFJQuI2UV4GOsSb4MVZwKn/fdfeWLmpjzvn7Mw3Z75knbTOQFrUtxx3NglnXmjx8spyqesRrhAG0ckIBmS7ik0dmwYkwr5WYr2TGO9k044oa7SOtA8sjnJA9fVuZsUbaMd9A5KB0FUJ2hb/XQu1fdPStalPUlGj7P8jtkZcoOp3I11SjtUrwaBGJLXGOM7HVYWqaK577WS2Q14JjKtQ9yBFbyqnSjyKwfyEehAbNCa90aDfsWZu2RK2f1B+r/be47pbHWB+Qr9kGad8fsF/VWMZVMG8o835t4csTEbPO2toqLzn5Lp4fqITHxZ5d7taQFQ77dM8cfyHk9uLO2amvyx/tV1jDitkvMiy+JInJ6nRywGUzpQ10PZ4iCqJWJpEZZzbqUsDPSIISYlqg0orp791cuFN4dhJPvXttPB+mFa7E5kLmWUfcXuI1fGp7jOdTBxyPqp6CT1+PPxLNHvIz8loFvae5x/gTcadMCwCFAW318ctonKVyn2USq3avIskWOkBAhR6Czh56dyC9XSFHDw6aH9g4IfizQ==X02j7"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
@@ -35,7 +35,7 @@ bamboo_license = "bamboo-license"
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after product is fully
 # installed and configured.
 jira_replica_count = 1
-confluence_replica_count = 1
+confluence_replica_count = 2
 bitbucket_replica_count = 1
 crowd_replica_count = 1
 
@@ -110,11 +110,11 @@ jira_image_repository = "atlassian/jira-software"
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
 # Jira version
-jira_version_tag = "9.12.12"
+jira_version_tag = "10.3.12"
 
 # JSM version
 # ! REQUIRED for JSM !
-# jira_version_tag = "5.12.12"
+# jira_version_tag = "10.3.12"
 
 # Dataset size. Used only when snapshots_json_file_path is defined. Defaults to large.
 jira_dataset_size = "large"
@@ -172,7 +172,7 @@ jira_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
 ################################################################################
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
-confluence_version_tag = "8.5.14"
+confluence_version_tag = "9.2.9"
 
 # Dataset size. Used only when snapshots_json_file_path is defined. Defaults to large
 confluence_dataset_size = "large"
@@ -247,7 +247,7 @@ confluence_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
 ################################################################################
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
-bitbucket_version_tag = "8.9.18"
+bitbucket_version_tag = "9.4.12"
 
 # Dataset size. Used only when snapshots_json_file_path is defined. Defaults to large
 bitbucket_dataset_size = "large"
@@ -335,7 +335,7 @@ bitbucket_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
 ################################################################################
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
-crowd_version_tag = "6.0.0"
+crowd_version_tag = "7.1.0"
 
 # Helm chart version of Crowd and Crowd agent instances. By default the latest version is installed.
 # crowd_helm_chart_version       = "<helm_chart_version>"
@@ -346,7 +346,7 @@ crowd_version_tag = "6.0.0"
 crowd_installation_timeout = 20
 
 # Crowd instance resource configuration
-crowd_cpu      = "2"
+crowd_cpu      = "4"
 crowd_mem      = "8Gi"
 crowd_min_heap = "2048m"
 crowd_max_heap = "2048m"
@@ -366,7 +366,7 @@ crowd_nfs_limits_memory   = "2Gi"
 # Documentation can be found via:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS
-crowd_db_major_engine_version = "14"
+crowd_db_major_engine_version = "17"
 crowd_db_instance_class       = "db.m5.large"
 crowd_db_allocated_storage    = 200
 crowd_db_iops                 = 1000
@@ -390,7 +390,7 @@ crowd_db_master_password     = "Password1!"
 
 # A list of JVM arguments to be passed to the server. Defaults to an empty list.
 # Example: ["-Dproperty=value", "-Dproperty1=value1"]
-crowd_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
+crowd_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true", "-Datlassian.upm.config.loosecheck.allowed=true"]
 
 ################################################################################
 # Bamboo Settings
@@ -399,8 +399,8 @@ crowd_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
 # By default, latest supported by DCAPT version is set.
 # https://hub.docker.com/r/atlassian/bamboo/tags
 # https://hub.docker.com/r/atlassian/bamboo-agent-base/tags
-bamboo_version_tag       = "9.6.6"
-bamboo_agent_version_tag = "9.6.6"
+bamboo_version_tag       = "10.2.9"
+bamboo_agent_version_tag = "10.2.9"
 
 # Helm chart version of Bamboo and Bamboo agent instances
 # bamboo_helm_chart_version       = "<helm_chart_version>"
@@ -461,7 +461,7 @@ bamboo_nfs_limits_memory   = "2Gi"
 # Documentation can be found via:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS
-bamboo_db_major_engine_version = "14"
+bamboo_db_major_engine_version = "16"
 bamboo_db_instance_class       = "db.t3.medium"
 bamboo_db_allocated_storage    = 100
 bamboo_db_iops                 = 1000
