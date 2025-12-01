@@ -1,0 +1,90 @@
+Name: Lucene index files location
+NodeId: 36004297
+Is healthy: true
+Failure reason: Your lucene search index directory '/var/atlassian/application-data/confluence/index' is mounted on 'ext4'.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Free Disk Space (Local Home)
+NodeId: 36004297
+Is healthy: true
+Failure reason: You have enough free disk space. You currently have 180.5 GB free in /var/atlassian/application-data/confluence (/dev/nvme1n1), which is above the recommended threshold.
+Severity: UNDEFINEDAdditional links: []
+
+Name: License Expiry
+NodeId: null
+Is healthy: true
+Failure reason: Your subscription expires on 05 Feb 2025.
+Severity: UNDEFINEDAdditional links: []
+
+Name: End of Life
+NodeId: null
+Is healthy: true
+Failure reason: Confluence version 8.5 has not reached End of Life. This version will reach End of Life on 22 Aug 2025.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Embedded database
+NodeId: null
+Is healthy: true
+Failure reason: You are not using an HSQL or H2 embedded database with a production license.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Fonts
+NodeId: 36004297
+Is healthy: true
+Failure reason: System fonts are available in supported Java distribution.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Java Version and Vendor
+NodeId: 36004297
+Is healthy: true
+Failure reason: Your Java version, 17.0.13 and vendor, OpenJDK Runtime Environment are supported.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Open files limit
+NodeId: 36004297
+Is healthy: true
+Failure reason: The number of open files is within an acceptable limit.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Lucene
+NodeId: 36004297
+Is healthy: true
+Failure reason: The check of the Lucene index is ok.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Internal Administrator User
+NodeId: null
+Is healthy: true
+Failure reason: Confluence has an internal user directory with an active administrator
+Severity: UNDEFINEDAdditional links: []
+
+Name: Collaborative Editing Mode
+NodeId: null
+Is healthy: true
+Failure reason: Collaborative editing is currently on. If your Synchrony service is running your team should be in collaboration heaven.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Modern HTTP Protocols
+NodeId: null
+Is healthy: true
+Failure reason: Users are able to access your Atlassian product using modern HTTP protocols.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Audit Log Capacity
+NodeId: null
+Is healthy: true
+Failure reason: The number of audit log events in the database does not exceed 80% of the set limit.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Security Vulnerabilities
+NodeId: null
+Is healthy: true
+Failure reason: This version is not listed as an affected version in any published security advisories.
+Severity: UNDEFINEDAdditional links: []
+
+Name: Java Flight Recorder (JFR)
+NodeId: 36004297
+Is healthy: true
+Failure reason: Java Flight Recorder (JFR) is enabled and the recording is running.
+Severity: UNDEFINEDAdditional links: []
+
