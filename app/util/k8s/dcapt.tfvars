@@ -25,7 +25,7 @@ products = ["confluence"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "AAABiw0ODAoPeNp1kVtvm0AQhd/3VyD1JVVFtGABxtJKTRbcEnFJQuI2UV4GOsSb4MVZwKn/fdfeWLmpjzvn7Mw3Z75knbTOQFrUtxx3NglnXmjx8spyqesRrhAG0ckIBmS7ik0dmwYkwr5WYr2TGO9k044oa7SOtA8sjnJA9fVuZsUbaMd9A5KB0FUJ2hb/XQu1fdPStalPUlGj7P8jtkZcoOp3I11SjtUrwaBGJLXGOM7HVYWqaK577WS2Q14JjKtQ9yBFbyqnSjyKwfyEehAbNCa90aDfsWZu2RK2f1B+r/be47pbHWB+Qr9kGad8fsF/VWMZVMG8o835t4csTEbPO2toqLzn5Lp4fqITHxZ5d7taQFQ77dM8cfyHk9uLO2amvyx/tV1jDitkvMiy+JInJ6nRywGUzpQ10PZ4iCqJWJpEZZzbqUsDPSIISYlqg0orp791cuFN4dhJPvXttPB+mFa7E5kLmWUfcXuI1fGp7jOdTBxyPqp6CT1+PPxLNHvIz8loFvae5x/gTcadMCwCFAW318ctonKVyn2USq3avIskWOkBAhR6Czh56dyC9XSFHDw6aH9g4IfizQ==X02j7"
+confluence_license = "AAABiQ0ODAoPeNp1kV1PwjAUhu/3K5Z4ozEjbZHPpImwDV3chwoYTbwp9cAqoyPtxoe/3kIlRo1Jb3ret6fPec9ZUko3AO4i7OJOH/f6ra7rjycuQaTl+ApYJUoZsArooeJh4iHiBKC5EuuDRP1SzosaJAf33PiY64OsQF289t1ww4r62MBJmDBVyYwt3K2F2p9atj2EzXFiwUHqf8TCik+g9OFL4ozr2TdBpWpwuMFopPVqBiqbT7VxUg873wTWlakFk0LbylCJpajsS8YrsQFrMhNV5h4a5oLmbP8G8np29DZ4uTrB3DKd08RH/igkkdrhj3ircMrYczPi850eLcoilYN8OsiboyxcbJcAvenDpS7WV0/vaS+ZFncvr9T+/jX8ZL+GlK2A+lmShI9+NIitPq6YMpnSOSs0nKKKAhpHwThMvZhg0sakZXIBtQFllOEzIl7vJcNelHbbXpy1bmyrw4rshuywS9ifYsVthDqo22xi575WPGcafi/+K5oj5N9kDAv9yfMJJynH7DAtAhUAi2SrhZGr8KOfAzMM+OiaKHrqsNoCFHyiqlFY7nVmdIO7hm2tdWc6k6xrX02j3"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
@@ -35,7 +35,7 @@ bamboo_license = "bamboo-license"
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after product is fully
 # installed and configured.
 jira_replica_count = 1
-confluence_replica_count = 2
+confluence_replica_count = 1
 bitbucket_replica_count = 1
 crowd_replica_count = 1
 
