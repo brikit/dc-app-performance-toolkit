@@ -50,5 +50,6 @@ def app_specific_action(webdriver, datasets):
             inputElement.send_keys(pageName)
             page.wait_until_visible((By.ID, "dialog-next-button")).click()
             page.wait_until_visible((By.ID, "dialog-submit-button")).click()
+            page.wait_until_visible((By.ID, "content"))
         sub_measure()
     measure()
